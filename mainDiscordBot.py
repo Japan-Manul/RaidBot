@@ -212,7 +212,6 @@ async def show(ctx):
 
 @bot.command()
 async def choose_channel(ctx):
-    print('<choose_channel>', [ctx.guild.id, ctx.channel.id])
     with db:
         curs = db.cursor()
         write_to_log('db', 'INSERT', f"into 'servers' values ('{str(ctx.guild.id)}','{str(ctx.channel.id)}')")
@@ -227,7 +226,6 @@ async def choose_channel(ctx):
 
 @bot.command()
 async def delete_channel(ctx):
-    print('<delete_channel>', [ctx.guild.id, ctx.channel.id])
     with db:
         curs = db.cursor()
         write_to_log('db', 'DELETE', f"from 'servers' where 'id'={ctx.guild.id}")
