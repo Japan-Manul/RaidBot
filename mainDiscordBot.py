@@ -237,4 +237,15 @@ async def delete_channel(ctx):
     write_to_log('commands', 'delete_channel', f"guild_id:'{ctx.guild.id}'")
 
 
+@bot.command()
+async def send(ctx, mode):
+    file_names = ['log\main.log', 'log\sends.log', 'log\command.log', 'log\db.log'] if mode == 'logs' else [
+        'temp/ProcessScreenE.jpg', 'temp/ProcessScreenM.jpg', 'temp/ProcessScreenH.jpg', 'temp/Easy.jpg',
+        'temp/Mid.jpg', 'temp/Hard.jpg'] if mode == 'temp' else []
+    files = []
+    for file_name in file_names:
+        files.append(discord.File(fr"{config['base_dir']}\{file_name}.log", filename=f"{file_name}.log"))
+    await ctx.reply('Держи', files=files)
+
+
 bot.run(config['token'])
