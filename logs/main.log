@@ -1,0 +1,624 @@
+08/17/23 02:32:47 |----<launch>---------------------------------
+08/17/23 02:32:47 | <loop_event>: start_count started
+08/17/23 02:37:31 | <loop_event>: slow_count started
+08/17/23 02:37:31 | <loop_event>: start_count was stopped
+08/17/23 13:39:00 |----<launch>---------------------------------
+08/17/23 13:39:00 | <loop_event>: start_count started
+08/17/23 13:45:01 | <loop_event>: slow_count started
+08/17/23 13:45:01 | <loop_event>: start_count was stopped
+08/17/23 18:18:20 |----<launch>---------------------------------
+08/17/23 18:18:20 | <loop_event>: start_count started
+08/17/23 18:22:31 | <loop_event>: slow_count started
+08/17/23 18:22:31 | <loop_event>: start_count was stopped
+08/21/23 10:13:06 |----<launch>---------------------------------
+08/21/23 10:13:06 | <loop_event>: start_count started
+08/21/23 10:15:01 | <loop_event>: slow_count started
+08/21/23 10:15:01 | <loop_event>: start_count was stopped
+08/22/23 21:37:55 |----<launch>---------------------------------
+08/22/23 21:37:55 | <loop_event>: start_count started
+08/22/23 21:45:01 | <loop_event>: slow_count started
+08/22/23 21:45:01 | <loop_event>: start_count was stopped
+08/23/23 11:03:10 |----<launch>---------------------------------
+08/23/23 11:03:10 | <loop_event>: start_count started
+08/23/23 11:07:31 | <loop_event>: slow_count started
+08/23/23 11:07:31 | <loop_event>: start_count was stopped
+08/23/23 21:56:08 |----<launch>---------------------------------
+08/23/23 21:56:08 | <loop_event>: start_count started
+08/26/23 12:00:12 |----<launch>---------------------------------
+08/26/23 12:00:12 | <loop_event>: start_count started
+08/26/23 12:07:31 | <loop_event>: slow_count started
+08/26/23 12:07:31 | <loop_event>: start_count was stopped
+08/27/23 10:18:15 |----<launch>---------------------------------
+08/27/23 10:18:15 | <loop_event>: start_count started
+08/27/23 10:22:31 | <loop_event>: slow_count started
+08/27/23 10:22:31 | <loop_event>: start_count was stopped
+08/28/23 14:46:56 |----<launch>---------------------------------
+08/28/23 14:46:56 | <loop_event>: start_count started
+08/28/23 14:52:31 | <loop_event>: slow_count started
+08/28/23 14:52:31 | <loop_event>: start_count was stopped
+08/28/23 18:03:17 |----<launch>---------------------------------
+08/28/23 18:03:17 | <loop_event>: start_count started
+08/28/23 18:07:31 | <loop_event>: slow_count started
+08/28/23 18:07:31 | <loop_event>: start_count was stopped
+08/29/23 09:55:29 |----<launch>---------------------------------
+08/29/23 09:55:29 | <loop_event>: start_count started
+08/29/23 10:00:01 | <loop_event>: slow_count started
+08/29/23 10:00:01 | <loop_event>: start_count was stopped
+08/30/23 12:54:46 |----<launch>---------------------------------
+08/30/23 12:54:46 | <loop_event>: start_count started
+08/30/23 13:00:01 | <loop_event>: slow_count started
+08/30/23 13:00:01 | <loop_event>: start_count was stopped
+08/30/23 13:00:01 | <loop_event>: slow_count tick
+08/30/23 13:00:16 | <analyze_cycle>: result: {'Easy': ('SteelCradle', 'Lunatics', 'Factory'), 'Mid': ('DataTheft', 'Steppenwolfs', 'Powerplant'), 'Hard': ('FrontierDefense', 'Nomads', 'Crater')}
+08/30/23 13:07:31 | <loop_event>: slow_count tick
+08/30/23 13:15:01 | <loop_event>: slow_count tick
+08/30/23 13:22:31 | <loop_event>: slow_count tick
+08/30/23 13:30:01 | <loop_event>: slow_count tick
+08/30/23 13:30:15 | <analyze_cycle>: result: {'Easy': ('TheWarForFire', 'Lunatics', 'Powerplant'), 'Mid': ('PerimeterBreach', 'Scavengers', 'LostCoast'), 'Hard': ('PerimeterBreach', 'FireStarters', 'Terminal45')}
+08/30/23 13:37:31 | <loop_event>: slow_count tick
+08/30/23 13:45:01 | <loop_event>: slow_count tick
+08/30/23 13:52:31 | <loop_event>: slow_count tick
+08/30/23 14:00:01 | <loop_event>: slow_count tick
+08/30/23 14:00:16 | <analyze_cycle>: result: {'Easy': ('TheWarForFire', 'Lunatics', 'FoundersCanyon'), 'Mid': ('FrontierDefense', 'Scavengers', 'ShipGraveyard'), 'Hard': ('FrontierDefense', 'Steppenwolfs', 'Crater')}
+08/30/23 14:07:31 | <loop_event>: slow_count tick
+08/30/23 14:15:01 | <loop_event>: slow_count tick
+08/30/23 14:22:31 | <loop_event>: slow_count tick
+08/30/23 14:30:01 | <loop_event>: slow_count tick
+08/30/23 14:30:15 | <analyze_cycle>: result: {'Easy': ('TheLastConvoy', 'Scavengers', 'DeadHighway'), 'Mid': ('DataTheft', 'DawnsChildren', 'OldTown'), 'Hard': ('PerimeterBreach', 'Nomads', 'Terminal45')}
+08/30/23 14:37:31 | <loop_event>: slow_count tick
+08/30/23 14:45:01 | <loop_event>: slow_count tick
+08/30/23 14:52:31 | <loop_event>: slow_count tick
+08/30/23 15:00:01 | <loop_event>: slow_count tick
+08/30/23 15:00:15 | <analyze_cycle>: result: {'Easy': ('GoneInTwoMinutes', 'Lunatics', 'DeadHighway'), 'Mid': ('TheLastConvoy', 'Scavengers', 'EasternArray'), 'Hard': ('TheWarForFire', 'Steppenwolfs', 'FoundersCanyon')}
+08/30/23 15:07:31 | <loop_event>: slow_count tick
+08/30/23 15:15:01 | <loop_event>: slow_count tick
+08/30/23 15:22:31 | <loop_event>: slow_count tick
+08/30/23 15:30:01 | <loop_event>: slow_count tick
+08/30/23 15:30:15 | <analyze_cycle>: result: {'Easy': ('SteelCradle', 'Scavengers', 'Factory'), 'Mid': ('TheLastConvoy', 'DawnsChildren', 'EasternArray'), 'Hard': ('DataTheft', 'Lunatics', 'RockCity')}
+08/30/23 15:37:31 | <loop_event>: slow_count tick
+08/30/23 15:45:01 | <loop_event>: slow_count tick
+08/30/23 15:52:31 | <loop_event>: slow_count tick
+08/30/23 16:00:01 | <loop_event>: slow_count tick
+08/30/23 16:00:15 | <analyze_cycle>: result: {'Easy': ('DataTheft', 'Scavengers', 'OldTown'), 'Mid': ('PerimeterBreach', 'Lunatics', 'Terminal45'), 'Hard': ('HitAndRun', 'DawnsChildren', 'DeadHighway')}
+08/30/23 16:07:31 | <loop_event>: slow_count tick
+08/30/23 16:15:01 | <loop_event>: slow_count tick
+08/30/23 16:22:31 | <loop_event>: slow_count tick
+08/30/23 16:30:01 | <loop_event>: slow_count tick
+08/30/23 16:30:16 | <analyze_cycle>: result: {'Easy': ('DataTheft', 'Lunatics', 'FoundersCanyon'), 'Mid': ('TheLastConvoy', 'Steppenwolfs', 'DeadHighway'), 'Hard': ('FrontierDefense', 'DawnsChildren', 'Fortress')}
+08/30/23 16:37:31 | <loop_event>: slow_count tick
+08/30/23 16:45:01 | <loop_event>: slow_count tick
+08/30/23 16:52:31 | <loop_event>: slow_count tick
+08/30/23 17:00:01 | <loop_event>: slow_count tick
+08/30/23 17:00:16 | <analyze_cycle>: result: {'Easy': ('GoneInTwoMinutes', 'Scavengers', 'EasternArray'), 'Mid': ('FrontierDefense', 'Steppenwolfs', 'RockCity'), 'Hard': ('DataTheft', 'DawnsChildren', 'OldTown')}
+08/30/23 17:07:31 | <loop_event>: slow_count tick
+08/30/23 17:15:01 | <loop_event>: slow_count tick
+08/30/23 17:22:31 | <loop_event>: slow_count tick
+08/30/23 17:30:01 | <loop_event>: slow_count tick
+08/30/23 17:30:15 | <analyze_cycle>: result: {'Easy': ('TheWarForFire', 'Scavengers', 'Bridge'), 'Mid': ('TheLastConvoy', 'Lunatics', 'CursedMines'), 'Hard': ('GoneInTwoMinutes', 'Steppenwolfs', 'EasternArray')}
+08/30/23 17:37:31 | <loop_event>: slow_count tick
+08/30/23 17:45:01 | <loop_event>: slow_count tick
+08/30/23 17:52:31 | <loop_event>: slow_count tick
+08/30/23 18:00:01 | <loop_event>: slow_count tick
+08/30/23 18:00:16 | <analyze_cycle>: result: {'Easy': ('DataTheft', 'Lunatics', 'Powerplant'), 'Mid': ('SteelCradle', 'Steppenwolfs', 'Factory'), 'Hard': ('TheWarForFire', 'FireStarters', 'FoundersCanyon')}
+08/30/23 18:07:31 | <loop_event>: slow_count tick
+08/30/23 18:15:01 | <loop_event>: slow_count tick
+08/30/23 18:22:31 | <loop_event>: slow_count tick
+08/30/23 18:30:01 | <loop_event>: slow_count tick
+08/30/23 18:30:15 | <analyze_cycle>: result: {'Easy': ('PerimeterBreach', 'Lunatics', 'LostCoast'), 'Mid': ('FrontierDefense', 'Scavengers', 'Bridge'), 'Hard': ('SteelCradle', 'FireStarters', 'Factory')}
+08/30/23 18:37:31 | <loop_event>: slow_count tick
+08/30/23 18:45:01 | <loop_event>: slow_count tick
+08/30/23 18:52:31 | <loop_event>: slow_count tick
+08/30/23 19:00:01 | <loop_event>: slow_count tick
+08/30/23 19:00:16 | <analyze_cycle>: result: {'Easy': ('PerimeterBreach', 'Lunatics', 'LostCoast'), 'Mid': ('DataTheft', 'Steppenwolfs', 'OldTown'), 'Hard': ('SteelCradle', 'FireStarters', 'Factory')}
+08/30/23 19:07:31 | <loop_event>: slow_count tick
+08/30/23 19:15:01 | <loop_event>: slow_count tick
+08/30/23 19:22:31 | <loop_event>: slow_count tick
+08/30/23 19:30:01 | <loop_event>: slow_count tick
+08/30/23 19:30:15 | <analyze_cycle>: result: {'Easy': ('GoneInTwoMinutes', 'Lunatics', 'EasternArray'), 'Mid': ('DataTheft', 'DawnsChildren', 'Powerplant'), 'Hard': ('SteelCradle', 'Steppenwolfs', 'WrathOfKhan')}
+08/30/23 19:37:31 | <loop_event>: slow_count tick
+08/30/23 19:45:01 | <loop_event>: slow_count tick
+08/30/23 19:52:31 | <loop_event>: slow_count tick
+08/30/23 20:00:01 | <loop_event>: slow_count tick
+08/30/23 20:00:16 | <analyze_cycle>: result: {'Easy': ('SteelCradle', 'Lunatics', 'Factory'), 'Mid': ('FrontierDefense', 'Scavengers', 'Crater'), 'Hard': ('GoneInTwoMinutes', 'Nomads', 'CursedMines')}
+08/30/23 20:07:31 | <loop_event>: slow_count tick
+08/30/23 20:15:01 | <loop_event>: slow_count tick
+08/30/23 20:22:31 | <loop_event>: slow_count tick
+08/30/23 20:30:01 | <loop_event>: slow_count tick
+08/30/23 20:30:17 | <analyze_cycle>: result: {'Easy': ('TheWarForFire', 'Scavengers', 'Powerplant'), 'Mid': ('FrontierDefense', 'DawnsChildren', 'ShipGraveyard'), 'Hard': ('DataTheft', 'FireStarters', 'ChemicalPlant')}
+08/30/23 20:37:31 | <loop_event>: slow_count tick
+08/30/23 20:45:01 | <loop_event>: slow_count tick
+08/30/23 20:52:31 | <loop_event>: slow_count tick
+08/30/23 21:00:01 | <loop_event>: slow_count tick
+08/30/23 21:00:15 | <analyze_cycle>: result: {'Easy': ('PerimeterBreach', 'Lunatics', 'Terminal45'), 'Mid': ('DataTheft', 'DawnsChildren', 'Powerplant'), 'Hard': ('HitAndRun', 'Nomads', 'EasternArray')}
+08/30/23 21:07:31 | <loop_event>: slow_count tick
+08/30/23 21:15:01 | <loop_event>: slow_count tick
+08/30/23 21:22:31 | <loop_event>: slow_count tick
+08/30/23 21:30:01 | <loop_event>: slow_count tick
+08/30/23 21:30:16 | <analyze_cycle>: result: {'Easy': ('GoneInTwoMinutes', 'Scavengers', 'CursedMines'), 'Mid': ('DataTheft', 'Steppenwolfs', 'FoundersCanyon'), 'Hard': ('FrontierDefense', 'FireStarters', 'Crater')}
+08/30/23 21:37:31 | <loop_event>: slow_count tick
+08/30/23 21:45:01 | <loop_event>: slow_count tick
+08/30/23 21:52:31 | <loop_event>: slow_count tick
+08/30/23 22:00:01 | <loop_event>: slow_count tick
+08/30/23 22:00:16 | <analyze_cycle>: result: {'Easy': ('DataTheft', 'Scavengers', 'Bridge'), 'Mid': ('TheWarForFire', 'Steppenwolfs', 'FoundersCanyon'), 'Hard': ('HitAndRun', 'Nomads', 'EasternArray')}
+08/30/23 22:07:31 | <loop_event>: slow_count tick
+08/30/23 22:15:01 | <loop_event>: slow_count tick
+08/30/23 22:22:31 | <loop_event>: slow_count tick
+08/30/23 22:30:01 | <loop_event>: slow_count tick
+08/30/23 22:30:15 | <analyze_cycle>: result: {'Easy': ('DataTheft', 'Scavengers', 'RockCity'), 'Mid': ('PerimeterBreach', 'Lunatics', 'LostCoast'), 'Hard': ('FrontierDefense', 'Steppenwolfs', 'ShipGraveyard')}
+08/30/23 22:37:31 | <loop_event>: slow_count tick
+08/30/23 22:45:01 | <loop_event>: slow_count tick
+08/30/23 22:52:31 | <loop_event>: slow_count tick
+08/30/23 23:00:01 | <loop_event>: slow_count tick
+08/30/23 23:00:16 | <analyze_cycle>: result: {'Easy': ('TheWarForFire', 'Scavengers', 'RockCity'), 'Mid': ('SteelCradle', 'Steppenwolfs', 'Factory'), 'Hard': ('FrontierDefense', 'Nomads', 'Crater')}
+08/30/23 23:07:31 | <loop_event>: slow_count tick
+08/30/23 23:15:01 | <loop_event>: slow_count tick
+08/30/23 23:22:31 | <loop_event>: slow_count tick
+08/30/23 23:30:01 | <loop_event>: slow_count tick
+08/30/23 23:30:16 | <analyze_cycle>: result: {'Easy': ('PerimeterBreach', 'Scavengers', 'Terminal45'), 'Mid': ('FrontierDefense', 'Lunatics', 'RockCity'), 'Hard': ('DataTheft', 'Nomads', 'FoundersCanyon')}
+08/30/23 23:37:31 | <loop_event>: slow_count tick
+08/30/23 23:45:01 | <loop_event>: slow_count tick
+08/30/23 23:52:31 | <loop_event>: slow_count tick
+08/31/23 00:00:01 | <loop_event>: slow_count tick
+08/31/23 00:00:15 | <analyze_cycle>: result: {'Easy': ('HitAndRun', 'Lunatics', 'EasternArray'), 'Mid': ('GoneInTwoMinutes', 'Steppenwolfs', 'CursedMines'), 'Hard': ('SteelCradle', 'DawnsChildren', 'ShipGraveyard')}
+08/31/23 00:07:31 | <loop_event>: slow_count tick
+08/31/23 00:15:01 | <loop_event>: slow_count tick
+08/31/23 00:22:31 | <loop_event>: slow_count tick
+08/31/23 00:30:01 | <loop_event>: slow_count tick
+08/31/23 00:30:15 | <analyze_cycle>: result: {'Easy': ('TheWarForFire', 'Lunatics', 'Bridge'), 'Mid': ('HitAndRun', 'DawnsChildren', 'CursedMines'), 'Hard': ('PerimeterBreach', 'Scavengers', 'Terminal45')}
+08/31/23 00:37:31 | <loop_event>: slow_count tick
+08/31/23 00:45:01 | <loop_event>: slow_count tick
+08/31/23 00:52:31 | <loop_event>: slow_count tick
+08/31/23 01:00:01 | <loop_event>: slow_count tick
+08/31/23 01:00:16 | <analyze_cycle>: result: {'Easy': ('TheWarForFire', 'Scavengers', 'FoundersCanyon'), 'Mid': ('FrontierDefense', 'DawnsChildren', 'RockCity'), 'Hard': ('DataTheft', 'Steppenwolfs', 'Bridge')}
+08/31/23 01:07:31 | <loop_event>: slow_count tick
+08/31/23 01:15:01 | <loop_event>: slow_count tick
+08/31/23 01:22:31 | <loop_event>: slow_count tick
+08/31/23 01:30:01 | <loop_event>: slow_count tick
+08/31/23 01:30:16 | <analyze_cycle>: result: {'Easy': ('HitAndRun', 'Lunatics', 'DeadHighway'), 'Mid': ('FrontierDefense', 'Steppenwolfs', 'Fortress'), 'Hard': ('TheWarForFire', 'Scavengers', 'OldTown')}
+08/31/23 01:37:31 | <loop_event>: slow_count tick
+08/31/23 01:45:01 | <loop_event>: slow_count tick
+08/31/23 01:52:31 | <loop_event>: slow_count tick
+08/31/23 02:00:01 | <loop_event>: slow_count tick
+08/31/23 02:00:16 | <analyze_cycle>: result: {'Easy': ('HitAndRun', 'Lunatics', 'CursedMines'), 'Mid': ('FrontierDefense', 'DawnsChildren', 'Fortress'), 'Hard': ('TheWarForFire', 'FireStarters', 'RockCity')}
+08/31/23 02:07:31 | <loop_event>: slow_count tick
+08/31/23 02:15:01 | <loop_event>: slow_count tick
+08/31/23 02:22:31 | <loop_event>: slow_count tick
+08/31/23 02:30:01 | <loop_event>: slow_count tick
+08/31/23 02:30:16 | <analyze_cycle>: result: {'Easy': ('TheWarForFire', 'Scavengers', 'OldTown'), 'Mid': ('FrontierDefense', 'Steppenwolfs', 'Bridge'), 'Hard': ('DataTheft', 'DawnsChildren', 'FoundersCanyon')}
+08/31/23 02:37:31 | <loop_event>: slow_count tick
+08/31/23 02:45:01 | <loop_event>: slow_count tick
+08/31/23 02:52:31 | <loop_event>: slow_count tick
+08/31/23 03:00:01 | <loop_event>: slow_count tick
+08/31/23 03:00:15 | <analyze_cycle>: result: {'Easy': ('HitAndRun', 'Scavengers', 'DeadHighway'), 'Mid': ('TheWarForFire', 'Lunatics', 'ShipGraveyard'), 'Hard': ('TheLastConvoy', 'DawnsChildren', 'EasternArray')}
+08/31/23 03:07:31 | <loop_event>: slow_count tick
+08/31/23 03:15:01 | <loop_event>: slow_count tick
+08/31/23 03:22:31 | <loop_event>: slow_count tick
+08/31/23 03:30:01 | <loop_event>: slow_count tick
+08/31/23 03:30:16 | <analyze_cycle>: result: {'Easy': ('SteelCradle', 'Lunatics', 'Factory'), 'Mid': ('FrontierDefense', 'DawnsChildren', 'Fortress'), 'Hard': ('TheWarForFire', 'Scavengers', 'WrathOfKhan')}
+08/31/23 03:37:31 | <loop_event>: slow_count tick
+08/31/23 03:45:01 | <loop_event>: slow_count tick
+08/31/23 03:52:31 | <loop_event>: slow_count tick
+08/31/23 04:00:01 | <loop_event>: slow_count tick
+08/31/23 04:00:16 | <analyze_cycle>: result: {'Easy': ('DataTheft', 'Lunatics', 'OldTown'), 'Mid': ('FrontierDefense', 'DawnsChildren', 'Fortress'), 'Hard': ('HitAndRun', 'FireStarters', 'CursedMines')}
+08/31/23 04:07:31 | <loop_event>: slow_count tick
+08/31/23 04:15:01 | <loop_event>: slow_count tick
+08/31/23 04:22:31 | <loop_event>: slow_count tick
+08/31/23 04:30:01 | <loop_event>: slow_count tick
+08/31/23 04:30:16 | <analyze_cycle>: result: {'Easy': ('TheWarForFire', 'Scavengers', 'FoundersCanyon'), 'Mid': ('FrontierDefense', 'Steppenwolfs', 'Crater'), 'Hard': ('DataTheft', 'DawnsChildren', 'ChemicalPlant')}
+08/31/23 04:37:31 | <loop_event>: slow_count tick
+08/31/23 04:45:01 | <loop_event>: slow_count tick
+08/31/23 04:52:31 | <loop_event>: slow_count tick
+08/31/23 05:00:01 | <loop_event>: slow_count tick
+08/31/23 05:00:15 | <analyze_cycle>: result: {'Easy': ('HitAndRun', 'Lunatics', 'EasternArray'), 'Mid': ('TheWarForFire', 'Steppenwolfs', 'OldTown'), 'Hard': ('PerimeterBreach', 'FireStarters', 'Terminal45')}
+08/31/23 05:07:31 | <loop_event>: slow_count tick
+08/31/23 05:15:01 | <loop_event>: slow_count tick
+08/31/23 05:22:31 | <loop_event>: slow_count tick
+08/31/23 05:30:01 | <loop_event>: slow_count tick
+08/31/23 05:30:16 | <analyze_cycle>: result: {'Easy': ('TheWarForFire', 'Lunatics', 'Bridge'), 'Mid': ('DataTheft', 'Scavengers', 'Powerplant'), 'Hard': ('FrontierDefense', 'DawnsChildren', 'Crater')}
+08/31/23 05:37:31 | <loop_event>: slow_count tick
+08/31/23 05:45:01 | <loop_event>: slow_count tick
+08/31/23 05:52:31 | <loop_event>: slow_count tick
+08/31/23 06:00:01 | <loop_event>: slow_count tick
+08/31/23 06:00:16 | <analyze_cycle>: result: {'Easy': ('TheWarForFire', 'Scavengers', 'Powerplant'), 'Mid': ('FrontierDefense', 'Lunatics', 'Crater'), 'Hard': ('TheLastConvoy', 'Nomads', 'DeadHighway')}
+08/31/23 06:07:31 | <loop_event>: slow_count tick
+08/31/23 06:15:01 | <loop_event>: slow_count tick
+08/31/23 06:22:31 | <loop_event>: slow_count tick
+08/31/23 06:30:01 | <loop_event>: slow_count tick
+08/31/23 06:30:15 | <analyze_cycle>: result: {'Easy': ('PerimeterBreach', 'Scavengers', 'LostCoast'), 'Mid': ('SteelCradle', 'DawnsChildren', 'ShipGraveyard'), 'Hard': ('FrontierDefense', 'Lunatics', 'Crater')}
+08/31/23 06:37:31 | <loop_event>: slow_count tick
+08/31/23 06:45:01 | <loop_event>: slow_count tick
+08/31/23 06:52:31 | <loop_event>: slow_count tick
+08/31/23 07:00:01 | <loop_event>: slow_count tick
+08/31/23 07:00:15 | <analyze_cycle>: result: {'Easy': ('PerimeterBreach', 'Scavengers', 'LostCoast'), 'Mid': ('TheLastConvoy', 'Lunatics', 'DeadHighway'), 'Hard': ('FrontierDefense', 'Nomads', 'Fortress')}
+08/31/23 07:07:31 | <loop_event>: slow_count tick
+08/31/23 07:15:01 | <loop_event>: slow_count tick
+08/31/23 07:22:31 | <loop_event>: slow_count tick
+08/31/23 07:30:01 | <loop_event>: slow_count tick
+08/31/23 07:30:15 | <analyze_cycle>: result: {'Easy': ('TheLastConvoy', 'Scavengers', 'EasternArray'), 'Mid': ('HitAndRun', 'DawnsChildren', 'DeadHighway'), 'Hard': ('DataTheft', 'FireStarters', 'FoundersCanyon')}
+08/31/23 07:37:31 | <loop_event>: slow_count tick
+08/31/23 07:45:01 | <loop_event>: slow_count tick
+08/31/23 07:52:31 | <loop_event>: slow_count tick
+08/31/23 08:00:01 | <loop_event>: slow_count tick
+08/31/23 08:00:15 | <analyze_cycle>: result: {'Easy': ('SteelCradle', 'Scavengers', 'Factory'), 'Mid': ('TheLastConvoy', 'Lunatics', 'DeadHighway'), 'Hard': ('FrontierDefense', 'Steppenwolfs', 'Crater')}
+08/31/23 08:07:31 | <loop_event>: slow_count tick
+08/31/23 08:15:01 | <loop_event>: slow_count tick
+08/31/23 08:22:31 | <loop_event>: slow_count tick
+08/31/23 08:30:01 | <loop_event>: slow_count tick
+08/31/23 08:30:15 | <analyze_cycle>: result: {'Easy': ('DataTheft', 'Lunatics', 'Powerplant'), 'Mid': ('TheLastConvoy', 'DawnsChildren', 'CursedMines'), 'Hard': ('PerimeterBreach', 'Nomads', 'Terminal45')}
+08/31/23 08:37:31 | <loop_event>: slow_count tick
+08/31/23 08:45:01 | <loop_event>: slow_count tick
+08/31/23 08:52:31 | <loop_event>: slow_count tick
+08/31/23 09:00:01 | <loop_event>: slow_count tick
+08/31/23 09:00:15 | <analyze_cycle>: result: {'Easy': ('PerimeterBreach', 'Scavengers', 'Terminal45'), 'Mid': ('FrontierDefense', 'DawnsChildren', 'Bridge'), 'Hard': ('SteelCradle', 'Nomads', 'Factory')}
+08/31/23 09:07:33 | <loop_event>: slow_count tick
+08/31/23 09:15:01 | <loop_event>: slow_count tick
+08/31/23 09:22:31 | <loop_event>: slow_count tick
+08/31/23 09:30:01 | <loop_event>: slow_count tick
+08/31/23 09:30:15 | <analyze_cycle>: result: {'Easy': ('FrontierDefense', 'Lunatics', 'Bridge'), 'Mid': ('FrontierDefense', 'Lunatics', 'Bridge'), 'Hard': ('FrontierDefense', 'Lunatics', 'Bridge')}
+08/31/23 11:09:01 |----<launch>---------------------------------
+08/31/23 11:09:01 | <loop_event>: start_count started
+08/31/23 11:15:01 | <loop_event>: slow_count started
+08/31/23 11:15:01 | <loop_event>: start_count was stopped
+08/31/23 11:15:01 | <loop_event>: slow_count tick
+08/31/23 11:22:31 | <loop_event>: slow_count tick
+08/31/23 11:30:01 | <loop_event>: slow_count tick
+08/31/23 11:30:18 | <analyze_cycle>: result: {'Easy': ('PerimeterBreach', 'Lunatics', 'Terminal45'), 'Mid': ('TheWarForFire', 'Scavengers', 'OldTown'), 'Hard': ('SteelCradle', 'Steppenwolfs', 'Factory')}
+08/31/23 11:37:31 | <loop_event>: slow_count tick
+08/31/23 11:45:01 | <loop_event>: slow_count tick
+08/31/23 11:52:31 | <loop_event>: slow_count tick
+08/31/23 12:00:01 | <loop_event>: slow_count tick
+08/31/23 12:00:15 | <analyze_cycle>: result: {'Easy': ('GoneInTwoMinutes', 'Scavengers', 'EasternArray'), 'Mid': ('TheWarForFire', 'Lunatics', 'OldTown'), 'Hard': ('DataTheft', 'FireStarters', 'Powerplant')}
+08/31/23 12:07:31 | <loop_event>: slow_count tick
+08/31/23 12:15:01 | <loop_event>: slow_count tick
+08/31/23 12:22:31 | <loop_event>: slow_count tick
+08/31/23 12:30:01 | <loop_event>: slow_count tick
+08/31/23 12:30:15 | <analyze_cycle>: result: {'Easy': ('TheWarForFire', 'Scavengers', 'Bridge'), 'Mid': ('FrontierDefense', 'DawnsChildren', 'Crater'), 'Hard': ('HitAndRun', 'Steppenwolfs', 'CursedMines')}
+08/31/23 12:37:31 | <loop_event>: slow_count tick
+08/31/23 12:45:01 | <loop_event>: slow_count tick
+08/31/23 12:52:31 | <loop_event>: slow_count tick
+08/31/23 13:00:01 | <loop_event>: slow_count tick
+08/31/23 13:00:14 | <analyze_cycle>: result: {'Easy': ('DataTheft', 'Lunatics', 'FoundersCanyon'), 'Mid': ('PerimeterBreach', 'DawnsChildren', 'Terminal45'), 'Hard': ('SteelCradle', 'FireStarters', 'ShipGraveyard')}
+08/31/23 13:07:31 | <loop_event>: slow_count tick
+08/31/23 13:15:01 | <loop_event>: slow_count tick
+08/31/23 13:22:31 | <loop_event>: slow_count tick
+08/31/23 13:30:01 | <loop_event>: slow_count tick
+08/31/23 13:30:13 | <analyze_cycle>: result: {'Easy': ('TheLastConvoy', 'Scavengers', 'DeadHighway'), 'Mid': ('PerimeterBreach', 'Steppenwolfs', 'Terminal45'), 'Hard': ('GoneInTwoMinutes', 'DawnsChildren', 'EasternArray')}
+08/31/23 13:37:31 | <loop_event>: slow_count tick
+08/31/23 13:45:01 | <loop_event>: slow_count tick
+08/31/23 13:52:31 | <loop_event>: slow_count tick
+08/31/23 14:00:01 | <loop_event>: slow_count tick
+08/31/23 14:00:15 | <analyze_cycle>: result: {'Easy': ('GoneInTwoMinutes', 'Scavengers', 'CursedMines'), 'Mid': ('TheWarForFire', 'Steppenwolfs', 'Powerplant'), 'Hard': ('DataTheft', 'Lunatics', 'WrathOfKhan')}
+08/31/23 14:07:31 | <loop_event>: slow_count tick
+08/31/23 14:15:01 | <loop_event>: slow_count tick
+08/31/23 14:22:31 | <loop_event>: slow_count tick
+08/31/23 14:30:01 | <loop_event>: slow_count tick
+08/31/23 14:30:14 | <analyze_cycle>: result: {'Easy': ('DataTheft', 'Lunatics', 'OldTown'), 'Mid': ('PerimeterBreach', 'Scavengers', 'LostCoast'), 'Hard': ('TheLastConvoy', 'FireStarters', 'CursedMines')}
+08/31/23 14:37:31 | <loop_event>: slow_count tick
+08/31/23 14:45:01 | <loop_event>: slow_count tick
+08/31/23 14:52:31 | <loop_event>: slow_count tick
+08/31/23 15:00:01 | <loop_event>: slow_count tick
+08/31/23 15:00:14 | <analyze_cycle>: result: {'Easy': ('TheWarForFire', 'Scavengers', 'OldTown'), 'Mid': ('SteelCradle', 'Steppenwolfs', 'Factory'), 'Hard': ('PerimeterBreach', 'FireStarters', 'Terminal45')}
+08/31/23 15:07:31 | <loop_event>: slow_count tick
+08/31/23 15:15:01 | <loop_event>: slow_count tick
+08/31/23 15:22:31 | <loop_event>: slow_count tick
+08/31/23 15:30:01 | <loop_event>: slow_count tick
+08/31/23 15:30:15 | <analyze_cycle>: result: {'Easy': ('TheWarForFire', 'Lunatics', 'FoundersCanyon'), 'Mid': ('FrontierDefense', 'Scavengers', 'Bridge'), 'Hard': ('FrontierDefense', 'FireStarters', 'Crater')}
+08/31/23 15:37:31 | <loop_event>: slow_count tick
+08/31/23 15:45:01 | <loop_event>: slow_count tick
+08/31/23 15:52:31 | <loop_event>: slow_count tick
+08/31/23 16:00:01 | <loop_event>: slow_count tick
+08/31/23 16:00:13 | <analyze_cycle>: result: {'Easy': ('PerimeterBreach', 'Lunatics', 'Terminal45'), 'Mid': ('HitAndRun', 'Steppenwolfs', 'EasternArray'), 'Hard': ('GoneInTwoMinutes', 'Scavengers', 'DeadHighway')}
+08/31/23 16:07:31 | <loop_event>: slow_count tick
+08/31/23 16:15:01 | <loop_event>: slow_count tick
+08/31/23 16:22:31 | <loop_event>: slow_count tick
+08/31/23 16:30:01 | <loop_event>: slow_count tick
+08/31/23 16:30:14 | <analyze_cycle>: result: {'Easy': ('GoneInTwoMinutes', 'Lunatics', 'CursedMines'), 'Mid': ('TheLastConvoy', 'Scavengers', 'EasternArray'), 'Hard': ('SteelCradle', 'Nomads', 'ShipGraveyard')}
+08/31/23 16:37:31 | <loop_event>: slow_count tick
+08/31/23 16:45:01 | <loop_event>: slow_count tick
+08/31/23 16:52:31 | <loop_event>: slow_count tick
+08/31/23 17:00:01 | <loop_event>: slow_count tick
+08/31/23 17:00:16 | <analyze_cycle>: result: {'Easy': ('TheWarForFire', 'Scavengers', 'Powerplant'), 'Mid': ('FrontierDefense', 'Lunatics', 'Crater'), 'Hard': ('DataTheft', 'Nomads', 'FoundersCanyon')}
+08/31/23 17:07:31 | <loop_event>: slow_count tick
+08/31/23 17:15:01 | <loop_event>: slow_count tick
+08/31/23 17:22:31 | <loop_event>: slow_count tick
+08/31/23 17:30:01 | <loop_event>: slow_count tick
+08/31/23 17:30:14 | <analyze_cycle>: result: {'Easy': ('PerimeterBreach', 'Lunatics', 'LostCoast'), 'Mid': ('SteelCradle', 'Steppenwolfs', 'ShipGraveyard'), 'Hard': ('TheWarForFire', 'Nomads', 'Bridge')}
+08/31/23 17:37:31 | <loop_event>: slow_count tick
+08/31/23 17:45:01 | <loop_event>: slow_count tick
+08/31/23 17:52:31 | <loop_event>: slow_count tick
+08/31/23 18:00:01 | <loop_event>: slow_count tick
+08/31/23 18:00:15 | <analyze_cycle>: result: {'Easy': ('GoneInTwoMinutes', 'Lunatics', 'DeadHighway'), 'Mid': ('FrontierDefense', 'DawnsChildren', 'RockCity'), 'Hard': ('TheWarForFire', 'Steppenwolfs', 'FoundersCanyon')}
+08/31/23 18:07:31 | <loop_event>: slow_count tick
+08/31/23 18:15:01 | <loop_event>: slow_count tick
+08/31/23 18:22:31 | <loop_event>: slow_count tick
+08/31/23 18:30:01 | <loop_event>: slow_count tick
+08/31/23 18:30:15 | <analyze_cycle>: result: {'Easy': ('SteelCradle', 'Scavengers', 'Factory'), 'Mid': ('FrontierDefense', 'Steppenwolfs', 'Fortress'), 'Hard': ('DataTheft', 'Nomads', 'RockCity')}
+08/31/23 18:37:31 | <loop_event>: slow_count tick
+08/31/23 18:45:01 | <loop_event>: slow_count tick
+08/31/23 18:52:31 | <loop_event>: slow_count tick
+08/31/23 19:00:01 | <loop_event>: slow_count tick
+08/31/23 19:00:14 | <analyze_cycle>: result: {'Easy': ('TheWarForFire', 'Scavengers', 'FoundersCanyon'), 'Mid': ('GoneInTwoMinutes', 'Steppenwolfs', 'CursedMines'), 'Hard': ('PerimeterBreach', 'DawnsChildren', 'Terminal45')}
+08/31/23 19:07:31 | <loop_event>: slow_count tick
+08/31/23 19:15:01 | <loop_event>: slow_count tick
+08/31/23 19:22:31 | <loop_event>: slow_count tick
+08/31/23 19:30:01 | <loop_event>: slow_count tick
+08/31/23 19:30:14 | <analyze_cycle>: result: {'Easy': ('TheLastConvoy', 'Scavengers', 'DeadHighway'), 'Mid': ('SteelCradle', 'Lunatics', 'Factory'), 'Hard': ('FrontierDefense', 'Steppenwolfs', 'Fortress')}
+08/31/23 19:37:31 | <loop_event>: slow_count tick
+08/31/23 19:45:01 | <loop_event>: slow_count tick
+08/31/23 19:52:31 | <loop_event>: slow_count tick
+08/31/23 20:00:01 | <loop_event>: slow_count tick
+08/31/23 20:00:14 | <analyze_cycle>: result: {'Easy': ('TheLastConvoy', 'Scavengers', 'CursedMines'), 'Mid': ('PerimeterBreach', 'Lunatics', 'Terminal45'), 'Hard': ('GoneInTwoMinutes', 'Nomads', 'DeadHighway')}
+08/31/23 20:07:31 | <loop_event>: slow_count tick
+08/31/23 20:15:01 | <loop_event>: slow_count tick
+08/31/23 20:22:31 | <loop_event>: slow_count tick
+08/31/23 20:30:01 | <loop_event>: slow_count tick
+08/31/23 20:30:15 | <analyze_cycle>: result: {'Easy': ('TheWarForFire', 'Lunatics', 'OldTown'), 'Mid': ('GoneInTwoMinutes', 'DawnsChildren', 'EasternArray'), 'Hard': ('FrontierDefense', 'FireStarters', 'Crater')}
+08/31/23 20:37:31 | <loop_event>: slow_count tick
+08/31/23 20:45:01 | <loop_event>: slow_count tick
+08/31/23 20:52:31 | <loop_event>: slow_count tick
+08/31/23 21:00:01 | <loop_event>: slow_count tick
+08/31/23 21:00:15 | <analyze_cycle>: result: {'Easy': ('PerimeterBreach', 'Scavengers', 'LostCoast'), 'Mid': ('FrontierDefense', 'DawnsChildren', 'Fortress'), 'Hard': ('DataTheft', 'FireStarters', 'Powerplant')}
+08/31/23 21:08:44 |----<launch>---------------------------------
+08/31/23 21:08:44 | <loop_event>: start_count started
+08/31/23 21:15:01 | <loop_event>: slow_count started
+08/31/23 21:15:01 | <loop_event>: start_count was stopped
+08/31/23 21:15:01 | <loop_event>: slow_count tick
+08/31/23 21:22:31 | <loop_event>: slow_count tick
+08/31/23 21:30:01 | <loop_event>: slow_count tick
+08/31/23 21:30:18 | <analyze_cycle>: result: {'Easy': ('HitAndRun', 'Lunatics', 'EasternArray'), 'Mid': ('FrontierDefense', 'Steppenwolfs', 'Crater'), 'Hard': ('SteelCradle', 'DawnsChildren', 'Factory')}
+08/31/23 21:37:31 | <loop_event>: slow_count tick
+08/31/23 21:45:01 | <loop_event>: slow_count tick
+08/31/23 21:52:31 | <loop_event>: slow_count tick
+08/31/23 22:00:01 | <loop_event>: slow_count tick
+08/31/23 22:00:16 | <analyze_cycle>: result: {'Easy': ('SteelCradle', 'Lunatics', 'Factory'), 'Mid': ('DataTheft', 'Steppenwolfs', 'Bridge'), 'Hard': ('TheWarForFire', 'Scavengers', 'FoundersCanyon')}
+08/31/23 22:07:31 | <loop_event>: slow_count tick
+08/31/23 22:15:01 | <loop_event>: slow_count tick
+08/31/23 22:22:31 | <loop_event>: slow_count tick
+08/31/23 22:30:01 | <loop_event>: slow_count tick
+08/31/23 22:30:16 | <analyze_cycle>: result: {'Easy': ('DataTheft', 'Lunatics', 'Powerplant'), 'Mid': ('FrontierDefense', 'Scavengers', 'RockCity'), 'Hard': ('TheWarForFire', 'Nomads', 'Bridge')}
+08/31/23 22:37:31 | <loop_event>: slow_count tick
+08/31/23 22:45:01 | <loop_event>: slow_count tick
+08/31/23 22:52:31 | <loop_event>: slow_count tick
+08/31/23 23:00:01 | <loop_event>: slow_count tick
+08/31/23 23:00:16 | <analyze_cycle>: result: {'Easy': ('TheWarForFire', 'Lunatics', 'Powerplant'), 'Mid': ('DataTheft', 'Steppenwolfs', 'FoundersCanyon'), 'Hard': ('FrontierDefense', 'Nomads', 'Bridge')}
+08/31/23 23:00:17 | <loop_event>: slow_count tick
+08/31/23 23:00:31 | <analyze_cycle>: result: {'Easy': ('TheWarForFire', 'Lunatics', 'Powerplant'), 'Mid': ('DataTheft', 'Steppenwolfs', 'FoundersCanyon'), 'Hard': ('FrontierDefense', 'Nomads', 'Bridge')}
+08/31/23 23:00:35 | <loop_event>: slow_count tick
+08/31/23 23:00:49 | <analyze_cycle>: result: {'Easy': ('TheWarForFire', 'Lunatics', 'Powerplant'), 'Mid': ('TheWarForFire', 'Lunatics', 'Powerplant'), 'Hard': ('TheWarForFire', 'Lunatics', 'Powerplant')}
+08/31/23 23:00:54 | <loop_event>: slow_count tick
+08/31/23 23:01:08 | <analyze_cycle>: result: {'Easy': ('TheWarForFire', 'Lunatics', 'Powerplant'), 'Mid': ('TheWarForFire', 'Lunatics', 'Powerplant'), 'Hard': ('TheWarForFire', 'Lunatics', 'Powerplant')}
+08/31/23 23:01:20 | <loop_event>: slow_count tick
+08/31/23 23:07:31 | <loop_event>: slow_count tick
+08/31/23 23:15:01 | <loop_event>: slow_count tick
+08/31/23 23:22:31 | <loop_event>: slow_count tick
+08/31/23 23:30:01 | <loop_event>: slow_count tick
+08/31/23 23:30:14 | <analyze_cycle>: result: {'Easy': ('FrontierDefense', 'Lunatics', 'Bridge'), 'Mid': ('FrontierDefense', 'Lunatics', 'Bridge'), 'Hard': ('FrontierDefense', 'Lunatics', 'Bridge')}
+08/31/23 23:30:17 | <loop_event>: slow_count tick
+08/31/23 23:30:30 | <analyze_cycle>: result: {'Easy': ('FrontierDefense', 'Lunatics', 'Bridge'), 'Mid': ('FrontierDefense', 'Lunatics', 'Bridge'), 'Hard': ('FrontierDefense', 'Lunatics', 'Bridge')}
+08/31/23 23:30:34 | <loop_event>: slow_count tick
+08/31/23 23:30:48 | <analyze_cycle>: result: {'Easy': ('FrontierDefense', 'Lunatics', 'Bridge'), 'Mid': ('FrontierDefense', 'Lunatics', 'Bridge'), 'Hard': ('FrontierDefense', 'Lunatics', 'Bridge')}
+08/31/23 23:31:38 | <loop_event>: slow_count tick
+08/31/23 23:37:31 | <loop_event>: slow_count tick
+08/31/23 23:45:01 | <loop_event>: slow_count tick
+08/31/23 23:52:31 | <loop_event>: slow_count tick
+09/01/23 00:00:01 | <loop_event>: slow_count tick
+09/01/23 00:00:14 | <analyze_cycle>: result: {'Easy': ('FrontierDefense', 'Lunatics', 'Bridge'), 'Mid': ('FrontierDefense', 'Lunatics', 'Bridge'), 'Hard': ('FrontierDefense', 'Lunatics', 'Bridge')}
+09/01/23 00:01:33 | <loop_event>: slow_count tick
+09/01/23 00:07:31 | <loop_event>: slow_count tick
+09/01/23 00:15:01 | <loop_event>: slow_count tick
+09/01/23 00:22:31 | <loop_event>: slow_count tick
+09/01/23 00:30:01 | <loop_event>: slow_count tick
+09/01/23 00:30:14 | <analyze_cycle>: result: {'Easy': ('FrontierDefense', 'Lunatics', 'Bridge'), 'Mid': ('FrontierDefense', 'Lunatics', 'Bridge'), 'Hard': ('FrontierDefense', 'Lunatics', 'Bridge')}
+09/01/23 00:36:59 | <loop_event>: slow_count tick
+09/01/23 00:37:31 | <loop_event>: slow_count tick
+09/01/23 00:45:01 | <loop_event>: slow_count tick
+09/01/23 00:52:31 | <loop_event>: slow_count tick
+09/01/23 01:00:01 | <loop_event>: slow_count tick
+09/01/23 01:00:14 | <analyze_cycle>: result: {'Easy': ('FrontierDefense', 'Lunatics', 'Bridge'), 'Mid': ('FrontierDefense', 'Lunatics', 'Bridge'), 'Hard': ('FrontierDefense', 'Lunatics', 'Bridge')}
+09/01/23 01:06:01 | <loop_event>: slow_count tick
+09/01/23 01:07:31 | <loop_event>: slow_count tick
+09/01/23 01:15:01 | <loop_event>: slow_count tick
+09/01/23 01:22:31 | <loop_event>: slow_count tick
+09/01/23 01:30:01 | <loop_event>: slow_count tick
+09/01/23 01:30:14 | <analyze_cycle>: result: {'Easy': ('FrontierDefense', 'Lunatics', 'Bridge'), 'Mid': ('FrontierDefense', 'Lunatics', 'Bridge'), 'Hard': ('FrontierDefense', 'Lunatics', 'Bridge')}
+09/01/23 01:35:55 | <loop_event>: slow_count tick
+09/01/23 01:37:31 | <loop_event>: slow_count tick
+09/01/23 01:45:01 | <loop_event>: slow_count tick
+09/01/23 01:52:31 | <loop_event>: slow_count tick
+09/01/23 02:00:01 | <loop_event>: slow_count tick
+09/01/23 02:00:14 | <analyze_cycle>: result: {'Easy': ('FrontierDefense', 'Lunatics', 'Bridge'), 'Mid': ('FrontierDefense', 'Lunatics', 'Bridge'), 'Hard': ('PerimeterBreach', 'Lunatics', 'Terminal45')}
+09/01/23 02:13:15 | <loop_event>: slow_count tick
+09/01/23 02:13:15 | <loop_event>: slow_count tick
+09/01/23 02:15:01 | <loop_event>: slow_count tick
+09/01/23 02:22:31 | <loop_event>: slow_count tick
+09/01/23 02:30:01 | <loop_event>: slow_count tick
+09/01/23 02:30:14 | <analyze_cycle>: result: {'Easy': ('FrontierDefense', 'Lunatics', 'Bridge'), 'Mid': ('FrontierDefense', 'Lunatics', 'Bridge'), 'Hard': ('FrontierDefense', 'Lunatics', 'Bridge')}
+09/01/23 02:34:23 | <loop_event>: slow_count tick
+09/01/23 02:37:31 | <loop_event>: slow_count tick
+09/01/23 02:45:01 | <loop_event>: slow_count tick
+09/01/23 02:52:31 | <loop_event>: slow_count tick
+09/01/23 03:00:01 | <loop_event>: slow_count tick
+09/01/23 03:00:14 | <analyze_cycle>: result: {'Easy': ('FrontierDefense', 'Lunatics', 'Bridge'), 'Mid': ('FrontierDefense', 'Lunatics', 'Bridge'), 'Hard': ('FrontierDefense', 'Lunatics', 'Bridge')}
+09/01/23 03:10:42 | <loop_event>: slow_count tick
+09/01/23 03:10:43 | <loop_event>: slow_count tick
+09/01/23 03:15:01 | <loop_event>: slow_count tick
+09/01/23 03:22:31 | <loop_event>: slow_count tick
+09/01/23 03:30:01 | <loop_event>: slow_count tick
+09/01/23 03:30:14 | <analyze_cycle>: result: {'Easy': ('FrontierDefense', 'Lunatics', 'Bridge'), 'Mid': ('FrontierDefense', 'Lunatics', 'Bridge'), 'Hard': ('FrontierDefense', 'Lunatics', 'Bridge')}
+09/01/23 03:40:30 | <loop_event>: slow_count tick
+09/01/23 03:40:30 | <loop_event>: slow_count tick
+09/01/23 03:45:01 | <loop_event>: slow_count tick
+09/01/23 03:52:31 | <loop_event>: slow_count tick
+09/01/23 04:00:01 | <loop_event>: slow_count tick
+09/01/23 04:00:14 | <analyze_cycle>: result: {'Easy': ('FrontierDefense', 'Lunatics', 'Bridge'), 'Mid': ('FrontierDefense', 'Lunatics', 'Bridge'), 'Hard': ('FrontierDefense', 'Lunatics', 'Bridge')}
+09/01/23 04:00:53 | <loop_event>: slow_count tick
+09/01/23 04:01:06 | <analyze_cycle>: result: {'Easy': ('FrontierDefense', 'Lunatics', 'Bridge'), 'Mid': ('FrontierDefense', 'Lunatics', 'Bridge'), 'Hard': ('FrontierDefense', 'Lunatics', 'Bridge')}
+09/01/23 04:06:44 | <loop_event>: slow_count tick
+09/01/23 04:07:31 | <loop_event>: slow_count tick
+09/01/23 04:15:01 | <loop_event>: slow_count tick
+09/01/23 04:22:31 | <loop_event>: slow_count tick
+09/01/23 04:30:01 | <loop_event>: slow_count tick
+09/01/23 04:30:14 | <analyze_cycle>: result: {'Easy': ('FrontierDefense', 'Lunatics', 'Bridge'), 'Mid': ('FrontierDefense', 'Lunatics', 'Bridge'), 'Hard': ('FrontierDefense', 'Lunatics', 'Bridge')}
+09/01/23 04:31:38 | <loop_event>: slow_count tick
+09/01/23 04:37:31 | <loop_event>: slow_count tick
+09/01/23 04:45:01 | <loop_event>: slow_count tick
+09/01/23 04:52:31 | <loop_event>: slow_count tick
+09/01/23 05:00:01 | <loop_event>: slow_count tick
+09/01/23 05:00:14 | <analyze_cycle>: result: {'Easy': ('FrontierDefense', 'Lunatics', 'Bridge'), 'Mid': ('FrontierDefense', 'Lunatics', 'Bridge'), 'Hard': ('FrontierDefense', 'Lunatics', 'Bridge')}
+09/01/23 05:13:39 | <loop_event>: slow_count tick
+09/01/23 05:13:39 | <loop_event>: slow_count tick
+09/01/23 05:15:01 | <loop_event>: slow_count tick
+09/01/23 05:22:31 | <loop_event>: slow_count tick
+09/01/23 05:30:01 | <loop_event>: slow_count tick
+09/01/23 05:30:14 | <analyze_cycle>: result: {'Easy': ('FrontierDefense', 'Lunatics', 'Bridge'), 'Mid': ('FrontierDefense', 'Lunatics', 'Bridge'), 'Hard': ('FrontierDefense', 'Lunatics', 'Bridge')}
+09/01/23 05:42:16 | <loop_event>: slow_count tick
+09/01/23 05:42:16 | <loop_event>: slow_count tick
+09/01/23 05:45:01 | <loop_event>: slow_count tick
+09/01/23 05:52:31 | <loop_event>: slow_count tick
+09/01/23 06:00:01 | <loop_event>: slow_count tick
+09/01/23 06:00:14 | <analyze_cycle>: result: {'Easy': ('FrontierDefense', 'Lunatics', 'Bridge'), 'Mid': ('FrontierDefense', 'Lunatics', 'Bridge'), 'Hard': ('FrontierDefense', 'Lunatics', 'Bridge')}
+09/01/23 06:04:29 | <loop_event>: slow_count tick
+09/01/23 06:07:31 | <loop_event>: slow_count tick
+09/01/23 06:15:01 | <loop_event>: slow_count tick
+09/01/23 06:22:31 | <loop_event>: slow_count tick
+09/01/23 06:30:01 | <loop_event>: slow_count tick
+09/01/23 06:30:14 | <analyze_cycle>: result: {'Easy': ('FrontierDefense', 'Lunatics', 'Bridge'), 'Mid': ('FrontierDefense', 'Lunatics', 'Bridge'), 'Hard': ('FrontierDefense', 'Lunatics', 'Bridge')}
+09/01/23 06:39:37 | <loop_event>: slow_count tick
+09/01/23 06:39:37 | <loop_event>: slow_count tick
+09/01/23 06:45:01 | <loop_event>: slow_count tick
+09/01/23 06:51:18 |----<launch>---------------------------------
+09/01/23 06:51:18 | <loop_event>: start_count started
+09/01/23 06:52:31 | <loop_event>: slow_count started
+09/01/23 06:52:31 | <loop_event>: start_count was stopped
+09/01/23 06:52:31 | <loop_event>: slow_count tick
+09/01/23 07:00:01 | <loop_event>: slow_count tick
+09/01/23 07:00:21 | <analyze_cycle>: result: {'Easy': ('HitAndRun', 'Lunatics', 'CursedMines'), 'Mid': ('PerimeterBreach', 'DawnsChildren', 'Terminal45'), 'Hard': ('TheWarForFire', 'Nomads', 'Powerplant')}
+09/01/23 07:07:31 | <loop_event>: slow_count tick
+09/01/23 07:15:01 | <loop_event>: slow_count tick
+09/01/23 07:22:31 | <loop_event>: slow_count tick
+09/01/23 07:30:01 | <loop_event>: slow_count tick
+09/01/23 07:30:16 | <analyze_cycle>: result: {'Easy': ('TheWarForFire', 'Scavengers', 'OldTown'), 'Mid': ('GoneInTwoMinutes', 'Steppenwolfs', 'EasternArray'), 'Hard': ('FrontierDefense', 'FireStarters', 'Bridge')}
+09/01/23 07:37:31 | <loop_event>: slow_count tick
+09/01/23 07:45:01 | <loop_event>: slow_count tick
+09/01/23 07:52:31 | <loop_event>: slow_count tick
+09/01/23 08:00:01 | <loop_event>: slow_count tick
+09/01/23 08:00:15 | <analyze_cycle>: result: {'Easy': ('TheWarForFire', 'Scavengers', 'RockCity'), 'Mid': ('DataTheft', 'DawnsChildren', 'FoundersCanyon'), 'Hard': ('PerimeterBreach', 'Nomads', 'LostCoast')}
+09/01/23 08:07:31 | <loop_event>: slow_count tick
+09/01/23 08:15:01 | <loop_event>: slow_count tick
+09/01/23 08:22:31 | <loop_event>: slow_count tick
+09/01/23 08:30:01 | <loop_event>: slow_count tick
+09/01/23 08:30:15 | <analyze_cycle>: result: {'Easy': ('PerimeterBreach', 'Lunatics', 'Terminal45'), 'Mid': ('PerimeterBreach', 'Steppenwolfs', 'LostCoast'), 'Hard': ('TheWarForFire', 'Scavengers', 'RockCity')}
+09/01/23 08:37:31 | <loop_event>: slow_count tick
+09/01/23 08:45:01 | <loop_event>: slow_count tick
+09/01/23 08:52:31 | <loop_event>: slow_count tick
+09/01/23 09:00:01 | <loop_event>: slow_count tick
+09/01/23 09:00:15 | <analyze_cycle>: result: {'Easy': ('SteelCradle', 'Scavengers', 'Factory'), 'Mid': ('GoneInTwoMinutes', 'Steppenwolfs', 'DeadHighway'), 'Hard': ('DataTheft', 'Nomads', 'ChemicalPlant')}
+09/01/23 09:07:31 | <loop_event>: slow_count tick
+09/01/23 09:15:01 | <loop_event>: slow_count tick
+09/01/23 09:22:31 | <loop_event>: slow_count tick
+09/01/23 09:30:01 | <loop_event>: slow_count tick
+09/01/23 09:30:15 | <analyze_cycle>: result: {'Easy': ('DataTheft', 'Scavengers', 'Powerplant'), 'Mid': ('GoneInTwoMinutes', 'DawnsChildren', 'CursedMines'), 'Hard': ('TheLastConvoy', 'Lunatics', 'EasternArray')}
+09/01/23 09:37:31 | <loop_event>: slow_count tick
+09/01/23 09:45:01 | <loop_event>: slow_count tick
+09/01/23 09:52:31 | <loop_event>: slow_count tick
+09/01/23 10:00:01 | <loop_event>: slow_count tick
+09/01/23 10:00:15 | <analyze_cycle>: result: {'Easy': ('TheWarForFire', 'Scavengers', 'FoundersCanyon'), 'Mid': ('PerimeterBreach', 'Lunatics', 'Terminal45'), 'Hard': ('DataTheft', 'DawnsChildren', 'OldTown')}
+09/01/23 10:07:31 | <loop_event>: slow_count tick
+09/01/23 10:15:01 | <loop_event>: slow_count tick
+09/01/23 10:22:31 | <loop_event>: slow_count tick
+09/01/23 10:30:01 | <loop_event>: slow_count tick
+09/01/23 10:30:15 | <analyze_cycle>: result: {'Easy': ('GoneInTwoMinutes', 'Lunatics', 'DeadHighway'), 'Mid': ('PerimeterBreach', 'DawnsChildren', 'Terminal45'), 'Hard': ('SteelCradle', 'Steppenwolfs', 'Factory')}
+09/01/23 10:37:31 | <loop_event>: slow_count tick
+09/01/23 10:45:01 | <loop_event>: slow_count tick
+09/01/23 10:52:31 | <loop_event>: slow_count tick
+09/01/23 11:00:01 | <loop_event>: slow_count tick
+09/01/23 11:00:16 | <analyze_cycle>: result: {'Easy': ('TheWarForFire', 'Scavengers', 'Powerplant'), 'Mid': ('GoneInTwoMinutes', 'Steppenwolfs', 'EasternArray'), 'Hard': ('FrontierDefense', 'Nomads', 'Crater')}
+09/01/23 11:07:31 | <loop_event>: slow_count tick
+09/01/23 11:15:01 | <loop_event>: slow_count tick
+09/01/23 11:22:31 | <loop_event>: slow_count tick
+09/01/23 11:30:01 | <loop_event>: slow_count tick
+09/01/23 11:30:14 | <analyze_cycle>: result: {'Easy': ('PerimeterBreach', 'Lunatics', 'LostCoast'), 'Mid': ('GoneInTwoMinutes', 'Scavengers', 'CursedMines'), 'Hard': ('PerimeterBreach', 'Nomads', 'Terminal45')}
+09/01/23 11:37:31 | <loop_event>: slow_count tick
+09/01/23 11:45:01 | <loop_event>: slow_count tick
+09/01/23 11:52:31 | <loop_event>: slow_count tick
+09/01/23 12:00:01 | <loop_event>: slow_count tick
+09/01/23 12:00:15 | <analyze_cycle>: result: {'Easy': ('HitAndRun', 'Lunatics', 'DeadHighway'), 'Mid': ('GoneInTwoMinutes', 'Scavengers', 'CursedMines'), 'Hard': ('TheWarForFire', 'DawnsChildren', 'ShipGraveyard')}
+09/01/23 12:07:31 | <loop_event>: slow_count tick
+09/01/23 12:15:01 | <loop_event>: slow_count tick
+09/01/23 12:22:31 | <loop_event>: slow_count tick
+09/01/23 12:30:01 | <loop_event>: slow_count tick
+09/01/23 12:30:14 | <analyze_cycle>: result: {'Easy': ('SteelCradle', 'Lunatics', 'Factory'), 'Mid': ('GoneInTwoMinutes', 'DawnsChildren', 'CursedMines'), 'Hard': ('PerimeterBreach', 'Steppenwolfs', 'Terminal45')}
+09/01/23 12:37:31 | <loop_event>: slow_count tick
+09/01/23 12:45:01 | <loop_event>: slow_count tick
+09/01/23 12:52:31 | <loop_event>: slow_count tick
+09/01/23 13:00:01 | <loop_event>: slow_count tick
+09/01/23 13:00:16 | <analyze_cycle>: result: {'Easy': ('DataTheft', 'Scavengers', 'RockCity'), 'Mid': ('TheWarForFire', 'DawnsChildren', 'Bridge'), 'Hard': ('SteelCradle', 'Steppenwolfs', 'Factory')}
+09/01/23 13:07:31 | <loop_event>: slow_count tick
+09/01/23 13:15:01 | <loop_event>: slow_count tick
+09/01/23 13:22:31 | <loop_event>: slow_count tick
+09/01/23 13:30:01 | <loop_event>: slow_count tick
+09/01/23 13:30:15 | <analyze_cycle>: result: {'Easy': ('PerimeterBreach', 'Lunatics', 'Terminal45'), 'Mid': ('FrontierDefense', 'Steppenwolfs', 'Fortress'), 'Hard': ('TheWarForFire', 'Scavengers', 'OldTown')}
+09/01/23 13:37:31 | <loop_event>: slow_count tick
+09/01/23 13:45:01 | <loop_event>: slow_count tick
+09/01/23 13:52:31 | <loop_event>: slow_count tick
+09/01/23 14:00:01 | <loop_event>: slow_count tick
+09/01/23 14:00:15 | <analyze_cycle>: result: {'Easy': ('HitAndRun', 'Lunatics', 'EasternArray'), 'Mid': ('SteelCradle', 'DawnsChildren', 'Factory'), 'Hard': ('FrontierDefense', 'FireStarters', 'Fortress')}
+09/01/23 14:07:31 | <loop_event>: slow_count tick
+09/01/23 14:15:01 | <loop_event>: slow_count tick
+09/01/23 14:22:31 | <loop_event>: slow_count tick
+09/01/23 14:30:01 | <loop_event>: slow_count tick
+09/01/23 14:32:20 |----<launch>---------------------------------
+09/01/23 14:32:20 | <loop_event>: start_count started
+09/01/23 14:37:31 | <loop_event>: slow_count started
+09/01/23 14:37:31 | <loop_event>: start_count was stopped
+09/01/23 14:37:31 | <loop_event>: slow_count tick
+09/01/23 14:45:01 | <loop_event>: slow_count tick
+09/01/23 14:52:32 | <loop_event>: slow_count tick
+09/01/23 15:00:01 | <loop_event>: slow_count tick
+09/01/23 15:00:20 | <analyze_cycle>: result: {'Easy': ('TheWarForFire', 'Lunatics', 'Bridge'), 'Mid': ('DataTheft', 'Steppenwolfs', 'OldTown'), 'Hard': ('TheWarForFire', 'FireStarters', 'Powerplant')}
+09/01/23 15:07:31 | <loop_event>: slow_count tick
+09/01/23 15:15:01 | <loop_event>: slow_count tick
+09/01/23 15:22:31 | <loop_event>: slow_count tick
+09/01/23 15:30:01 | <loop_event>: slow_count tick
+09/01/23 15:30:17 | <analyze_cycle>: result: {'Easy': ('TheWarForFire', 'Scavengers', 'RockCity'), 'Mid': ('DataTheft', 'Lunatics', 'Powerplant'), 'Hard': ('SteelCradle', 'DawnsChildren', 'Factory')}
+09/01/23 15:37:31 | <loop_event>: slow_count tick
+09/01/23 15:45:02 | <loop_event>: slow_count tick
+09/01/23 15:52:31 | <loop_event>: slow_count tick
+09/01/23 16:00:01 | <loop_event>: slow_count tick
+09/01/23 16:00:16 | <analyze_cycle>: result: {'Easy': ('PerimeterBreach', 'Scavengers', 'LostCoast'), 'Mid': ('TheWarForFire', 'Steppenwolfs', 'Powerplant'), 'Hard': ('DataTheft', 'Lunatics', 'FoundersCanyon')}
+09/01/23 16:07:31 | <loop_event>: slow_count tick
+09/01/23 16:15:01 | <loop_event>: slow_count tick
+09/01/23 16:22:31 | <loop_event>: slow_count tick
+09/01/23 16:30:01 | <loop_event>: slow_count tick
+09/01/23 16:30:15 | <analyze_cycle>: result: {'Easy': ('FrontierDefense', 'Lunatics', 'Bridge'), 'Mid': ('FrontierDefense', 'Lunatics', 'Bridge'), 'Hard': ('FrontierDefense', 'Lunatics', 'Bridge')}
+09/01/23 16:30:16 | <loop_event>: slow_count tick
+09/01/23 16:30:29 | <analyze_cycle>: result: {'Easy': ('FrontierDefense', 'Lunatics', 'Bridge'), 'Mid': ('FrontierDefense', 'Lunatics', 'Bridge'), 'Hard': ('FrontierDefense', 'Lunatics', 'Bridge')}
+09/01/23 16:30:30 | <loop_event>: slow_count tick
+09/01/23 16:30:43 | <analyze_cycle>: result: {'Easy': ('FrontierDefense', 'Lunatics', 'Bridge'), 'Mid': ('FrontierDefense', 'Lunatics', 'Bridge'), 'Hard': ('FrontierDefense', 'Lunatics', 'Bridge')}
+09/01/23 16:30:46 | <loop_event>: slow_count tick
+09/01/23 16:30:59 | <analyze_cycle>: result: {'Easy': ('FrontierDefense', 'Lunatics', 'Bridge'), 'Mid': ('FrontierDefense', 'Lunatics', 'Bridge'), 'Hard': ('FrontierDefense', 'Lunatics', 'Bridge')}
+09/01/23 16:31:07 | <loop_event>: slow_count tick
+09/01/23 16:37:31 | <loop_event>: slow_count tick
+09/01/23 16:45:01 | <loop_event>: slow_count tick
+09/01/23 16:52:31 | <loop_event>: slow_count tick
+09/01/23 17:00:02 | <loop_event>: slow_count tick
+09/01/23 17:00:15 | <analyze_cycle>: result: {'Easy': ('FrontierDefense', 'Lunatics', 'Bridge'), 'Mid': ('FrontierDefense', 'Lunatics', 'Bridge'), 'Hard': ('FrontierDefense', 'Lunatics', 'Bridge')}
+09/01/23 17:00:26 | <loop_event>: slow_count tick
+09/01/23 17:00:39 | <analyze_cycle>: result: {'Easy': ('FrontierDefense', 'Lunatics', 'Bridge'), 'Mid': ('FrontierDefense', 'Lunatics', 'Bridge'), 'Hard': ('PerimeterBreach', 'Lunatics', 'Terminal45')}
+09/01/23 17:00:41 | <loop_event>: slow_count tick
+09/01/23 17:00:54 | <analyze_cycle>: result: {'Easy': ('FrontierDefense', 'Lunatics', 'Bridge'), 'Mid': ('FrontierDefense', 'Lunatics', 'Bridge'), 'Hard': ('FrontierDefense', 'Lunatics', 'Bridge')}
+09/01/23 17:01:34 | <loop_event>: slow_count tick
+09/01/23 17:04:21 |----<launch>---------------------------------
+09/01/23 17:04:21 | <loop_event>: start_count started
+09/01/23 17:07:31 | <loop_event>: slow_count started
+09/01/23 17:07:31 | <loop_event>: start_count was stopped
+09/01/23 17:07:31 | <loop_event>: slow_count tick
+09/01/23 17:15:01 | <loop_event>: slow_count tick
+09/01/23 17:22:31 | <loop_event>: slow_count tick
+09/01/23 17:30:01 | <loop_event>: slow_count tick
+09/01/23 17:30:14 | <analyze_cycle>: result: {'Easy': ('TheLastConvoy', 'FireStarters', 'CursedMines'), 'Mid': ('TheLastConvoy', 'FireStarters', 'CursedMines'), 'Hard': ('TheLastConvoy', 'FireStarters', 'CursedMines')}
+09/01/23 17:37:31 | <loop_event>: slow_count tick
+09/01/23 17:45:01 | <loop_event>: slow_count tick
+09/01/23 17:52:31 | <loop_event>: slow_count tick
+09/01/23 18:00:01 | <loop_event>: slow_count tick
+09/01/23 18:00:16 | <analyze_cycle>: result: {'Easy': ('DataTheft', 'Nomads', 'ChemicalPlant'), 'Mid': ('DataTheft', 'Nomads', 'ChemicalPlant'), 'Hard': ('DataTheft', 'Nomads', 'ChemicalPlant')}
