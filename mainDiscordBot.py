@@ -3,6 +3,7 @@ import sqlite3 as sql
 
 from discord.ext import tasks, commands
 
+from tools import write_to_log, translate, db
 from dropdowns import *
 from ScreenAnalyzer import *
 from settings import config
@@ -11,55 +12,25 @@ intents = discord.Intents.default()
 intents.message_content = True
 bot = commands.Bot(command_prefix='>', intents=intents)
 
-db = sql.connect('CrossDataBase.db')
+
+@bot.event
+async def on_ready():
+    write_to_log('main', 'launch')
+    start_count.start()
+    write_to_log('main', 'loop_event', 'start_count started')
 
 
-def translate(word):
-    ru_eng_dict = {
-        'Easy': 'Лёгкий',
-        'Mid': 'Средний',
-        'Hard': 'Тяжёлый',
-        'DawnsChildren': 'Дети Рассвета',
-        'FireStarters': 'Огнепоклонники',
-        'Lunatics': 'Бешеные',
-        'Nomads': 'Скитальцы',
-        'Scavengers': 'Мусорщики',
-        'Steppenwolfs': 'Степные волки',
-        'Bridge': 'Мост',
-        'ChemicalPlant': 'Химический завод',
-        'Crater': 'Кратер',
-        'CursedMines': 'Чертовы рудники',
-        'DeadHighway': 'Мертвое шоссе',
-        'EasternArray': 'Восточный ретранслятор',
-        'Factory': 'Фабрика',
-        'Fortress': 'Крепость',
-        'FoundersCanyon': 'Каньон основателей',
-        'LostCoast': 'Затерянный берег',
-        'OldTown': 'Старый город',
-        'Powerplant': 'ТЭЦ',
-        'RockCity': 'Рок-Сити',
-        'ShipGraveyard': 'Кладбище кораблей',
-        'Terminal45': 'Терминал-45',
-        'WrathOfKhan': 'Гнев Хана',
-        'DataTheft': 'Похищение данных',
-        'FrontierDefense': 'Оборона рубежа',
-        'GoneInTwoMinutes': 'Угнать за пару минут',
-        'HitAndRun': 'Бей и беги',
-        'PerimeterBreach': 'Прорыв периметра',
-        'SteelCradle': 'Стальная колыбель',
-        'TheLastConvoy': 'Последний конвой',
-        'TheWarForFire': 'Война за огонь'}
-    return ru_eng_dict[word]
-
-
-def write_to_log(file, event, description=None):
-    if description:
-        text = f'{strftime("%x %X")} | <{event}>: {description}\n'
-    else:
-        text = f'{strftime("%x %X")} |----<{event + ">":{"-"}{"<"}{40}}\n'
-    with open(fr"logs\{file}.log", "a") as f:
-        f.write(text)
-        print(text)
+@tasks.loop(seconds=1)
+async def start_count():
+    curtime = strptime(ctime())
+    time_to_start = (curtime[4] - curtime[4] % 7.5 + 7.5) * 60 - (curtime[4] * 60 + curtime[5])
+    print('time to start ', time_to_start)
+    if (curtime[4] * 60 + curtime[5]) % 450 == 0:
+        sleep(1)
+        slow_count.start()
+        write_to_log('main', 'loop_event', 'slow_count started')
+        start_count.stop()
+        write_to_log('main', 'loop_event', 'start_count was stopped')
 
 
 @tasks.loop(seconds=450)
@@ -120,7 +91,7 @@ async def slow_count():
                 await channel.send(files=(file_easy, file_mid, file_hard), embeds=(embed_easy, embed_mid, embed_hard),
                                    delete_after=1800)
                 write_to_log('sends', 'channel_send', f"channel_id:'{id[0]}'")
-            except discord.errors.InvalidData:
+            except:
                 write_to_log('sends', 'channel_error', f"channel_id:'{id[0]}'")
 
         with db:
@@ -148,32 +119,12 @@ async def slow_count():
                                                      filename=f"image{diff[0]}.jpg")
                             await user.send(file=curr_file, embed=curr_embed)
                             write_to_log('sends', 'user_send', f"user_id:'{user_id[0]}'")
-                        except discord.errors.InvalidData:
+                        except:
                             write_to_log('sends', 'user_error', f"user_id:'{user_id[0]}'")
-                write_to_log('sends', 'end_sends')
+        write_to_log('sends', 'end_sends')
     else:
         pyautogui.moveTo(320, 430)
         pyautogui.click()
-
-
-@tasks.loop(seconds=1)
-async def start_count():
-    curtime = strptime(ctime())
-    time_to_start = (curtime[4] - curtime[4] % 7.5 + 7.5) * 60 - (curtime[4] * 60 + curtime[5])
-    print('time to start ', time_to_start)
-    if (curtime[4] * 60 + curtime[5]) % 450 == 0:
-        sleep(1)
-        slow_count.start()
-        write_to_log('main', 'loop_event', 'slow_count started')
-        start_count.stop()
-        write_to_log('main', 'loop_event', 'start_count was stopped')
-
-
-@bot.event
-async def on_ready():
-    write_to_log('main', 'launch')
-    start_count.start()
-    write_to_log('main', 'loop_event', 'start_count started')
 
 
 @bot.command()
@@ -239,12 +190,12 @@ async def delete_channel(ctx):
 
 @bot.command()
 async def send(ctx, mode):
-    file_names = ['log\main.log', 'log\sends.log', 'log\command.log', 'log\db.log'] if mode == 'logs' else [
+    file_names = ('logs\main.log', 'logs\sends.log', 'logs\commands.log', 'logs\db.log') if mode == 'logs' else (
         'temp/ProcessScreenE.jpg', 'temp/ProcessScreenM.jpg', 'temp/ProcessScreenH.jpg', 'temp/Easy.jpg',
-        'temp/Mid.jpg', 'temp/Hard.jpg'] if mode == 'temp' else []
+        'temp/Mid.jpg', 'temp/Hard.jpg') if mode == 'temp' else ()
     files = []
     for file_name in file_names:
-        files.append(discord.File(fr"{config['base_dir']}\{file_name}.log", filename=f"{file_name}.log"))
+        files.append(discord.File(fr"{config['base_dir']}\{file_name}", filename=f"{file_name}"))
     await ctx.reply('Держи', files=files)
 
 

@@ -1,4 +1,5 @@
 import discord
+from tools import write_to_log, translate, db
 
 
 class RaidSelect(discord.ui.Select):
@@ -114,7 +115,6 @@ class DiffSelect(discord.ui.View):
         await interaction.response.defer()
 
     async def select_faction(self, interaction: discord.Interaction, choices):
-        from mainDiscordBot import write_to_log, db
         self.answer4 = choices
         self.children[3].disabled = True
         await interaction.message.edit(view=self)
@@ -148,9 +148,7 @@ class DiffSelect(discord.ui.View):
 
 
 class DeleteSelect(discord.ui.Select):
-    from mainDiscordBot import translate
     def __init__(self, rows):
-        from mainDiscordBot import translate
         options = []
         for row in rows:
             options.append(
@@ -174,7 +172,6 @@ class DeleteView(discord.ui.View):
         self.add_item(DeleteSelect(rows))
 
     async def select_delete(self, interaction: discord.Interaction, choices):
-        from mainDiscordBot import write_to_log, db
         self.answer = choices
         self.children[0].disabled = True
         await interaction.message.edit(view=self)
