@@ -48,3 +48,25 @@ def write_to_log(file, event, description=None):
     with open(fr"logs\{file}.log", "a") as f:
         f.write(text)
         print(text)
+
+def all_options(mode):
+    if mode in ('GoneInTwoMinutes', 'HitAndRun', 'TheLastConvoy'):
+        return '%CursedMines$DeadHighway$EasternArray$'
+
+    elif mode in ('DataTheft', 'TheWarForFire'):
+        return '%Bridge$Powerplant$OldTown$ChemicalPlant$WrathOfKhan$ShipGraveyard$FoundersCanyon$RockCity$'
+
+    elif mode == 'FrontierDefense':
+        return '%Bridge$ChemicalPlant$Crater$Fortress$ShipGraveyard$RockCity$'
+
+    elif mode == 'PerimeterBreach':
+        return '%LostCoast$Terminal45$'
+
+    elif mode == 'SteelCradle':
+        return '%ChemicalPlant$Factory$WrathOfKhan$ShipGraveyard$'
+
+    elif mode == 'Easy':
+        return '%Lunatics$Nomads$Scavengers'
+
+    elif mode in ('Mid', 'Hard'):
+        return '%Lunatics$FireStarters$Nomads$DawnsChildren$Scavengers$Steppenwolfs$'

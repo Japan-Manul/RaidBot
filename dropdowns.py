@@ -1,16 +1,16 @@
 import discord
-from tools import write_to_log, translate, db
+from tools import write_to_log, translate, all_options, db
 
 
 class RaidSelect(discord.ui.Select):
-    def __init__(self, mod):
+    def __init__(self, mode):
         cur_options = []
-        if mod == 'Easy':
+        if mode == 'Easy':
             cur_options = [('Последний конвой', 'TheLastConvoy'), ('Стальная колыбель', 'SteelCradle'),
                            ('Прорыв периметра', 'PerimeterBreach'), ('Война за огонь', 'TheWarForFire'),
                            ('Бей и беги', 'HitAndRun'), ('Похищение данных', 'DataTheft'),
                            ('Угнать за пару минут', 'GoneInTwoMinutes')]
-        elif mod in ('Mid', 'Hard'):
+        elif mode in ('Mid', 'Hard'):
             cur_options = [('Последний конвой', 'TheLastConvoy'), ('Стальная колыбель', 'SteelCradle'),
                            ('Прорыв периметра', 'PerimeterBreach'), ('Война за огонь', 'TheWarForFire'),
                            ('Бей и беги', 'HitAndRun'), ('Похищение данных', 'DataTheft'),
@@ -23,32 +23,40 @@ class RaidSelect(discord.ui.Select):
     async def callback(self, interaction: discord.Interaction):
         await self.view.select_raid(interaction, self.values)
 
+
 class MapSelect(discord.ui.Select):
-    def __init__(self, mod):
-        cur_options = []
-        if mod in ('GoneInTwoMinutes', 'HitAndRun', 'TheLastConvoy'):
+    def __init__(self, mode):
+        cur_options = [('Выбрать всё', all_options(mode))]
+        if mode in ('GoneInTwoMinutes', 'HitAndRun', 'TheLastConvoy'):
             max_value = 3
-            cur_options = [('Чертовы рудники', 'CursedMines'), ('Мертвое шоссе', 'DeadHighway'),
-                           ('Восточный ретранслятор', 'EasternArray')]
-        elif mod in ('DataTheft', 'TheWarForFire'):
+            for elem in [('Чертовы рудники', 'CursedMines'), ('Мертвое шоссе', 'DeadHighway'),
+                         ('Восточный ретранслятор', 'EasternArray')]:
+                cur_options.append(elem)
+
+        elif mode in ('DataTheft', 'TheWarForFire'):
             max_value = 8
-            cur_options = [('Мост', 'Bridge'), ('Тэц', 'Powerplant'), ('Старый город', 'OldTown'),
-                           ('Химический завод', 'ChemicalPlant'), ('Гнев Хана', 'WrathOfKhan'),
-                           ('Кладбище кораблей', 'ShipGraveyard'), ('Каньон основателей', 'FoundersCanyon'),
-                           ('Рок-сити', 'RockCity')]
-        elif mod == 'FrontierDefense':
+            for elem in [('Мост', 'Bridge'), ('Тэц', 'Powerplant'), ('Старый город', 'OldTown'),
+                         ('Химический завод', 'ChemicalPlant'), ('Гнев Хана', 'WrathOfKhan'),
+                         ('Кладбище кораблей', 'ShipGraveyard'), ('Каньон основателей', 'FoundersCanyon'),
+                         ('Рок-сити', 'RockCity')]:
+                cur_options.append(elem)
+
+        elif mode == 'FrontierDefense':
             max_value = 6
-            cur_options = [('Мост', 'Bridge'), ('Химический завод', 'ChemicalPlant'), ('Кратер', 'Crater'),
-                           ('Крепость', 'Fortress'), ('Кладбище кораблей', 'ShipGraveyard'), ('Рок-сити', 'RockCity')]
+            for elem in [('Мост', 'Bridge'), ('Химический завод', 'ChemicalPlant'), ('Кратер', 'Crater'),
+                         ('Крепость', 'Fortress'), ('Кладбище кораблей', 'ShipGraveyard'), ('Рок-сити', 'RockCity')]:
+                cur_options.append(elem)
 
-        elif mod == 'PerimeterBreach':
+        elif mode == 'PerimeterBreach':
             max_value = 2
-            cur_options = [('Затерянный берег', 'LostCoast'), ('Терминал-45', 'Terminal45')]
+            for elem in [('Затерянный берег', 'LostCoast'), ('Терминал-45', 'Terminal45')]:
+                cur_options.append(elem)
 
-        elif mod == 'SteelCradle':
+        elif mode == 'SteelCradle':
             max_value = 4
-            cur_options = [('Химический завод', 'ChemicalPlant'), ('Фабрика', 'Factory'), ('Гнев Хана', 'WrathOfKhan'),
-                           ('Кладбище кораблей', 'ShipGraveyard')]
+            for elem in [('Химический завод', 'ChemicalPlant'), ('Фабрика', 'Factory'), ('Гнев Хана', 'WrathOfKhan'),
+                         ('Кладбище кораблей', 'ShipGraveyard')]:
+                cur_options.append(elem)
         options = []
         for option in cur_options:
             options.append(discord.SelectOption(label=f"{option[0]}", value=f"{option[1]}"))
@@ -57,17 +65,20 @@ class MapSelect(discord.ui.Select):
     async def callback(self, interaction: discord.Interaction):
         await self.view.select_map(interaction, self.values)
 
+
 class FactionSelect(discord.ui.Select):
-    def __init__(self, mod):
-        cur_options = []
-        if mod == 'Easy':
+    def __init__(self, mode):
+        cur_options = [('Выбрать всё', all_options(mode))]
+        if mode == 'Easy':
             max_value = 3
-            cur_options = [('Бешеные', 'Lunatics'), ('Скитальцы', 'Nomads'), ('Мусорщики', 'Scavengers')]
-        elif mod in ('Mid', 'Hard'):
+            for elem in [('Бешеные', 'Lunatics'), ('Скитальцы', 'Nomads'), ('Мусорщики', 'Scavengers')]:
+                cur_options.append(elem)
+        elif mode in ('Mid', 'Hard'):
             max_value = 6
-            cur_options = [('Бешеные', 'Lunatics'), ('Огнепоклонники', 'FireStarters'), ('Скитальцы', 'Nomads'),
-                           ('Дети рассвета', 'DawnsChildren'), ('Мусорщики', 'Scavengers'),
-                           ('Степные волки', 'Steppenwolfs')]
+            for elem in [('Бешеные', 'Lunatics'), ('Огнепоклонники', 'FireStarters'), ('Скитальцы', 'Nomads'),
+                         ('Дети рассвета', 'DawnsChildren'), ('Мусорщики', 'Scavengers'),
+                         ('Степные волки', 'Steppenwolfs')]:
+                cur_options.append(elem)
         options = []
         for option in cur_options:
             options.append(discord.SelectOption(label=f"{option[0]}", value=f"{option[1]}"))
@@ -75,6 +86,7 @@ class FactionSelect(discord.ui.Select):
 
     async def callback(self, interaction: discord.Interaction):
         await self.view.select_faction(interaction, self.values)
+
 
 class DiffSelect(discord.ui.View):
     answer1 = None
@@ -126,12 +138,20 @@ class DiffSelect(discord.ui.View):
 
             maps_string = ''
             for elem in self.answer3:
-                maps_string += elem + '$'
+                if elem[0] == '%':
+                    maps_string = elem[1:]
+                    break
+                else:
+                    maps_string += elem + '$'
             maps_string = maps_string[:-1]
 
             factions_string = ''
             for elem in self.answer4:
-                factions_string += elem + '$'
+                if elem[0] == '%':
+                    factions_string = elem[1:]
+                    break
+                else:
+                    factions_string += elem + '$'
             factions_string = factions_string[:-1]
 
             write_to_log('db', 'INSERT',
@@ -149,11 +169,13 @@ class DiffSelect(discord.ui.View):
 
 class DeleteSelect(discord.ui.Select):
     def __init__(self, rows):
-        options = []
+        options = [discord.SelectOption(label='Удалить всё', value='%', description='')]
         for row in rows:
             options.append(
                 discord.SelectOption(label=f'{translate(row[2])} - {translate(row[3])}', value=f'{row[0]}',
                                      description=f'{str(list(map(translate, row[4].split("$"))))[:99:]}'))
+            options[0].value += f'{row[0]}$'
+        options[0].value = options[0].value[:-1]
         super().__init__(
             placeholder="Выбери пункты, которые хочешь удалить.",
             min_values=1,
@@ -163,6 +185,7 @@ class DeleteSelect(discord.ui.Select):
 
     async def callback(self, interaction: discord.MessageInteraction):
         await self.view.select_delete(interaction, self.values)
+
 
 class DeleteView(discord.ui.View):
     answer = None
@@ -177,11 +200,19 @@ class DeleteView(discord.ui.View):
         await interaction.message.edit(view=self)
         await interaction.response.defer()
         write_to_log('commands', 'delete', f"choice:'{self.answer}'")
+        delete_list = []
+        for elem in self.answer:
+            if elem[0] == '%':
+                delete_list = elem[1:].split('$')
+                break
+            else:
+                delete_list.append(elem)
         with db:
             curs = db.cursor()
-            for answer in self.answer:
-                curs.execute(f"DELETE FROM requests WHERE id={answer}")
-                write_to_log('db', 'DELETE', f"from 'requests' where 'id'={answer}")
+            if delete_list != ['']:
+                for id in delete_list:
+                    curs.execute(f"DELETE FROM requests WHERE id={id}")
+                    write_to_log('db', 'DELETE', f"from 'requests' where 'id'={id}")
             db.commit()
             curs.close()
         self.stop()
