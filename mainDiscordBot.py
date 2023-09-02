@@ -192,7 +192,7 @@ async def delete_channel(ctx):
 async def send(ctx, mode):
     file_names = ('logs\main.log', 'logs\sends.log', 'logs\commands.log', 'logs\db.log') if mode == 'logs' else (
         'temp/ProcessScreenE.jpg', 'temp/ProcessScreenM.jpg', 'temp/ProcessScreenH.jpg', 'temp/Easy.jpg',
-        'temp/Mid.jpg', 'temp/Hard.jpg') if mode == 'temp' else ()
+        'temp/Mid.jpg', 'temp/Hard.jpg') if mode == 'temp' else ('CrossDataBase.db') if mode == 'db' else ()
     files = []
     for file_name in file_names:
         files.append(discord.File(fr"{config['base_dir']}\{file_name}", filename=f"{file_name}"))
