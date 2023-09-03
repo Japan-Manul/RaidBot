@@ -26,7 +26,7 @@ async def start_count():
     time_to_start = (curtime[4] - curtime[4] % 7.5 + 7.5) * 60 - (curtime[4] * 60 + curtime[5])
     print('time to start ', time_to_start)
     if (curtime[4] * 60 + curtime[5]) % 450 == 0:
-        sleep(1)
+        await asyncio.sleep(1)
         slow_count.start()
         write_to_log('main', 'loop_event', 'slow_count started')
         start_count.stop()

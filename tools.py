@@ -4,7 +4,7 @@ import sqlite3
 db = sqlite3.connect('CrossDataBase.db')
 
 def translate(word):
-    ru_eng_dict = {
+    eng_ru_dict = {
         'Easy': 'Лёгкий',
         'Mid': 'Средний',
         'Hard': 'Тяжёлый',
@@ -38,7 +38,7 @@ def translate(word):
         'SteelCradle': 'Стальная колыбель',
         'TheLastConvoy': 'Последний конвой',
         'TheWarForFire': 'Война за огонь'}
-    return ru_eng_dict[word]
+    return eng_ru_dict.get(word, word)
 
 def write_to_log(file, event, description=None):
     if description:
@@ -50,23 +50,18 @@ def write_to_log(file, event, description=None):
         print(text)
 
 def all_options(mode):
-    if mode in ('GoneInTwoMinutes', 'HitAndRun', 'TheLastConvoy'):
-        return '%CursedMines$DeadHighway$EasternArray$'
+    options = {
+        'GoneInTwoMinutes': '%CursedMines$DeadHighway$EasternArray$',
+        'HitAndRun': '%CursedMines$DeadHighway$EasternArray$',
+        'TheLastConvoy': '%CursedMines$DeadHighway$EasternArray$',
+        'DataTheft': '%Bridge$Powerplant$OldTown$ChemicalPlant$WrathOfKhan$ShipGraveyard$FoundersCanyon$RockCity$',
+        'TheWarForFire': '%Bridge$Powerplant$OldTown$ChemicalPlant$WrathOfKhan$ShipGraveyard$FoundersCanyon$RockCity$',
+        'FrontierDefense': '%Bridge$ChemicalPlant$Crater$Fortress$ShipGraveyard$RockCity$',
+        'PerimeterBreach': '%LostCoast$Terminal45$',
+        'SteelCradle': '%ChemicalPlant$Factory$WrathOfKhan$ShipGraveyard$',
+        'Easy': '%Lunatics$Nomads$Scavengers',
+        'Mid': '%Lunatics$FireStarters$Nomads$DawnsChildren$Scavengers$Steppenwolfs$',
+        'Hard': '%Lunatics$FireStarters$Nomads$DawnsChildren$Scavengers$Steppenwolfs$'
+    }
 
-    elif mode in ('DataTheft', 'TheWarForFire'):
-        return '%Bridge$Powerplant$OldTown$ChemicalPlant$WrathOfKhan$ShipGraveyard$FoundersCanyon$RockCity$'
-
-    elif mode == 'FrontierDefense':
-        return '%Bridge$ChemicalPlant$Crater$Fortress$ShipGraveyard$RockCity$'
-
-    elif mode == 'PerimeterBreach':
-        return '%LostCoast$Terminal45$'
-
-    elif mode == 'SteelCradle':
-        return '%ChemicalPlant$Factory$WrathOfKhan$ShipGraveyard$'
-
-    elif mode == 'Easy':
-        return '%Lunatics$Nomads$Scavengers'
-
-    elif mode in ('Mid', 'Hard'):
-        return '%Lunatics$FireStarters$Nomads$DawnsChildren$Scavengers$Steppenwolfs$'
+    return options.get(mode, '%')
