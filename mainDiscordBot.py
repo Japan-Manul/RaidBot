@@ -30,7 +30,7 @@ async def start_count():
         slow_count.start()
         write_to_log('main', 'loop_event', 'slow_count started')
         start_count.stop()
-        write_to_log('main', 'loop_event', 'start_count was stopped')
+        write_to_log('main', 'loop_event', 'start_count stopped')
 
 
 @tasks.loop(seconds=450)
@@ -189,7 +189,8 @@ async def delete_channel(ctx):
 
 
 @bot.command()
-async def send(ctx, mode):
+@commands.is_owner()
+async def admin_send(ctx, mode):
     file_names = ('logs\main.log', 'logs\sends.log', 'logs\commands.log', 'logs\db.log') if mode == 'logs' else (
         'temp/ProcessScreenE.jpg', 'temp/ProcessScreenM.jpg', 'temp/ProcessScreenH.jpg', 'temp/Easy.jpg',
         'temp/Mid.jpg', 'temp/Hard.jpg') if mode == 'temp' else ('CrossDataBase.db') if mode == 'db' else ()
@@ -197,6 +198,28 @@ async def send(ctx, mode):
     for file_name in file_names:
         files.append(discord.File(fr"{config['base_dir']}\{file_name}", filename=f"{file_name}"))
     await ctx.reply('Держи', files=files)
+
+
+@bot.command()
+@commands.is_owner()
+async def admin_loop_start(ctx):
+    start_count.start()
+    write_to_log('main', 'loop_event', 'start_count started')
+    write_to_log('commands', 'admin_loop_start')
+
+
+@bot.command()
+@commands.is_owner()
+async def admin_loop_stop(ctx):
+    slow_count.stop()
+    write_to_log('main', 'loop_event', 'slow_count stopped')
+    write_to_log('commands', 'admin_loop_stop')
+
+
+@clear.error
+async def clear_error(ctx, error):
+    if isinstance(error, (commands.MissingPermissions, commands.MissingRole, commands.NotOwner)):
+        await ctx.reply("У вас нет прав для выполнения этой команды.")
 
 
 bot.run(config['token'])
