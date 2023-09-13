@@ -200,6 +200,7 @@ async def admin_send(ctx, mode):
         file_names = ('CrossDataBase.db',)
     else:
         file_names = ()
+				
     files = []
     for file_name in file_names:
         files.append(discord.File(fr"{config['base_dir']}\{file_name}", filename=f"{file_name}"))
