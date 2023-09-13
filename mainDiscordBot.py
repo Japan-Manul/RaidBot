@@ -1,3 +1,4 @@
+import asyncio
 from time import strftime, strptime, ctime
 import sqlite3 as sql
 
@@ -191,9 +192,15 @@ async def delete_channel(ctx):
 @bot.command()
 @commands.is_owner()
 async def admin_send(ctx, mode):
-    file_names = ('logs\main.log', 'logs\sends.log', 'logs\commands.log', 'logs\db.log') if mode == 'logs' else (
-        'temp/ProcessScreenE.jpg', 'temp/ProcessScreenM.jpg', 'temp/ProcessScreenH.jpg', 'temp/Easy.jpg',
-        'temp/Mid.jpg', 'temp/Hard.jpg') if mode == 'temp' else ('CrossDataBase.db',) if mode == 'db' else ()
+    if mode == 'logs':
+        file_names = ('logs/main.log', 'logs/sends.log', 'logs/commands.log', 'logs/db.log')
+    elif mode == 'temp':
+        file_names = ('temp/ProcessScreenE.jpg', 'temp/ProcessScreenM.jpg', 'temp/ProcessScreenH.jpg', 'temp/Easy.jpg', 'temp/Mid.jpg', 'temp/Hard.jpg')
+    elif mode == 'db':
+        file_names = ('CrossDataBase.db',)
+    else:
+        file_names = ()
+				
     files = []
     for file_name in file_names:
         files.append(discord.File(fr"{config['base_dir']}\{file_name}", filename=f"{file_name}"))
@@ -214,12 +221,6 @@ async def admin_loop_stop(ctx):
     slow_count.stop()
     write_to_log('main', 'loop_event', 'slow_count stopped')
     write_to_log('commands', 'admin_loop_stop')
-
-
-@clear.error
-async def clear_error(ctx, error):
-    if isinstance(error, (commands.MissingPermissions, commands.MissingRole, commands.NotOwner)):
-        await ctx.reply("У вас нет прав для выполнения этой команды.")
 
 
 bot.run(config['token'])
