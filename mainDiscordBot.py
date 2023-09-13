@@ -1,3 +1,4 @@
+import asyncio
 from time import strftime, strptime, ctime
 import sqlite3 as sql
 
@@ -12,6 +13,7 @@ intents = discord.Intents.default()
 intents.message_content = True
 bot = commands.Bot(command_prefix='>', intents=intents)
 
+sends_flag = True
 
 @bot.event
 async def on_ready():
@@ -191,9 +193,16 @@ async def delete_channel(ctx):
 @bot.command()
 @commands.is_owner()
 async def admin_send(ctx, mode):
-    file_names = ('logs\main.log', 'logs\sends.log', 'logs\commands.log', 'logs\db.log') if mode == 'logs' else (
-        'temp/ProcessScreenE.jpg', 'temp/ProcessScreenM.jpg', 'temp/ProcessScreenH.jpg', 'temp/Easy.jpg',
-        'temp/Mid.jpg', 'temp/Hard.jpg') if mode == 'temp' else ('CrossDataBase.db',) if mode == 'db' else ()
+    if mode == 'logs':
+        file_names = ('logs/main.log', 'logs/sends.log', 'logs/commands.log', 'logs/db.log')
+    elif mode == 'temp':
+        file_names = ('temp/ProcessScreenE.jpg', 'temp/ProcessScreenM.jpg', 'temp/ProcessScreenH.jpg', 'temp/Easy.jpg',
+                      'temp/Mid.jpg', 'temp/Hard.jpg')
+    elif mode == 'db':
+        file_names = ('CrossDataBase.db',)
+    else:
+        file_names = ()
+
     files = []
     for file_name in file_names:
         files.append(discord.File(fr"{config['base_dir']}\{file_name}", filename=f"{file_name}"))
@@ -202,24 +211,40 @@ async def admin_send(ctx, mode):
 
 @bot.command()
 @commands.is_owner()
-async def admin_loop_start(ctx):
-    start_count.start()
-    write_to_log('main', 'loop_event', 'start_count started')
-    write_to_log('commands', 'admin_loop_start')
+async def admin_loop(ctx, mode):
+    if mode == 'start':
+        start_count.start()
+        await ctx.reply('start_count запущен')
+        write_to_log('main', 'loop_event', 'start_count started')
+        write_to_log('commands', 'admin_loop', 'start')
+    elif mode == 'stop':
+        slow_count.stop()
+        await ctx.reply('slow_count приостановлен')
+        write_to_log('main', 'loop_event', 'slow_count stopped')
+        write_to_log('commands', 'admin_loop', 'stop')
+    else:
+        await ctx.reply('Команда не распознана')
+        write_to_log('commands', 'admin_loop', 'unknown mode')
 
 
 @bot.command()
 @commands.is_owner()
-async def admin_loop_stop(ctx):
-    slow_count.stop()
-    write_to_log('main', 'loop_event', 'slow_count stopped')
-    write_to_log('commands', 'admin_loop_stop')
-
-
-@clear.error
-async def clear_error(ctx, error):
-    if isinstance(error, (commands.MissingPermissions, commands.MissingRole, commands.NotOwner)):
-        await ctx.reply("У вас нет прав для выполнения этой команды.")
+async def admin_sends(ctx, mode):
+    if mode == 'start':
+        global sends_flag
+        sends_flag = True
+        await ctx.reply('рассылки возобновлены')
+        write_to_log('sends', 'sends resumed by admin')
+        write_to_log('commands', 'admin_sends', 'start')
+    elif mode == 'stop':
+        global sends_flag
+        sends_flag = False
+        await ctx.reply('рассылки приостановлены')
+        write_to_log('sends', 'sends stopped by admin')
+        write_to_log('commands', 'admin_sends', 'stop')
+    else:
+        await ctx.reply('Команда не распознана')
+        write_to_log('commands', 'admin_sends', 'unknown mode')
 
 
 bot.run(config['token'])
