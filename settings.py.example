@@ -1,0 +1,5 @@
+config = {
+    "token": 'Your123Token456',
+    "base_dir": 'Repository path',
+    "admin_id": '123456789'
+}
