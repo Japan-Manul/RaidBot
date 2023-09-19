@@ -210,9 +210,9 @@ class DeleteView(discord.ui.View):
         with db:
             curs = db.cursor()
             if delete_list != ['']:
-                for id in delete_list:
-                    curs.execute(f"DELETE FROM requests WHERE id={id}")
-                    write_to_log('db', 'DELETE', f"from 'requests' where 'id'={id}")
+                for _id in delete_list:
+                    curs.execute(f"DELETE FROM requests WHERE id={_id}")
+                    write_to_log('db', 'DELETE', f"from 'requests' where 'id'={_id}")
             db.commit()
             curs.close()
         self.stop()
