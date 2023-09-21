@@ -198,8 +198,7 @@ async def admin_send(ctx, mode):
     if mode == 'logs':
         file_names = ('logs/main.log', 'logs/sends.log', 'logs/commands.log', 'logs/db.log')
     elif mode == 'temp':
-        file_names = ('temp/ProcessScreenE.jpg', 'temp/ProcessScreenM.jpg', 'temp/ProcessScreenH.jpg', 'temp/Easy.jpg',
-                      'temp/Mid.jpg', 'temp/Hard.jpg')
+        file_names = ('temp/ProcessScreenE.jpg', 'temp/ProcessScreenM.jpg', 'temp/ProcessScreenH.jpg', 'temp/Easy.jpg', 'temp/Mid.jpg', 'temp/Hard.jpg')
     elif mode == 'db':
         file_names = ('CrossDataBase.db',)
     else:
