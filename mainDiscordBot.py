@@ -1,18 +1,21 @@
 import asyncio
-from time import strftime, strptime, ctime
 import sqlite3 as sql
+from time import strftime, strptime, ctime
 
+import pyautogui as ag
 from discord.ext import tasks, commands
 
 from tools import write_to_log, translate, db
 from dropdowns import *
-from ScreenAnalyzer import *
+from ScreenAnalyzer import analyze_cycle, build_image
 from settings import config
+
 
 intents = discord.Intents.default()
 intents.message_content = True
 bot = commands.Bot(command_prefix='>', intents=intents)
 
+sends_flag = True
 
 @bot.event
 async def on_ready():
@@ -38,7 +41,7 @@ async def start_count():
 async def slow_count():
     curtime = strptime(ctime())
     write_to_log('main', 'loop_event', 'slow_count tick')
-    if curtime[4] % 30 == 0:
+    if curtime[4] % 30 == 0 and sends_flag:
         result = analyze_cycle()
         write_to_log('main', 'analyze_cycle', f'result: {result}')
 
@@ -124,8 +127,8 @@ async def slow_count():
                             write_to_log('sends', 'user_error', f"user_id:'{user_id[0]}'")
         write_to_log('sends', 'end_sends')
     else:
-        pyautogui.moveTo(320, 430)
-        pyautogui.click()
+        ag.moveTo(320, 430)
+        ag.click()
 
 
 @bot.command()
@@ -200,7 +203,7 @@ async def admin_send(ctx, mode):
         file_names = ('CrossDataBase.db',)
     else:
         file_names = ()
-				
+
     files = []
     for file_name in file_names:
         files.append(discord.File(fr"{config['base_dir']}\{file_name}", filename=f"{file_name}"))
@@ -209,18 +212,40 @@ async def admin_send(ctx, mode):
 
 @bot.command()
 @commands.is_owner()
-async def admin_loop_start(ctx):
-    start_count.start()
-    write_to_log('main', 'loop_event', 'start_count started')
-    write_to_log('commands', 'admin_loop_start')
+async def admin_loop(ctx, mode):
+    if mode == 'start':
+        start_count.start()
+        await ctx.reply('start_count запущен')
+        write_to_log('main', 'loop_event', 'start_count started')
+        write_to_log('commands', 'admin_loop', 'start')
+    elif mode == 'stop':
+        slow_count.stop()
+        await ctx.reply('slow_count приостановлен')
+        write_to_log('main', 'loop_event', 'slow_count stopped')
+        write_to_log('commands', 'admin_loop', 'stop')
+    else:
+        await ctx.reply('Команда не распознана')
+        write_to_log('commands', 'admin_loop', 'unknown mode')
 
 
 @bot.command()
 @commands.is_owner()
-async def admin_loop_stop(ctx):
-    slow_count.stop()
-    write_to_log('main', 'loop_event', 'slow_count stopped')
-    write_to_log('commands', 'admin_loop_stop')
+async def admin_sends(ctx, mode):
+    if mode == 'start':
+        global sends_flag
+        sends_flag = True
+        await ctx.reply('рассылки возобновлены')
+        write_to_log('sends', 'sends resumed by admin')
+        write_to_log('commands', 'admin_sends', 'start')
+    elif mode == 'stop':
+        global sends_flag
+        sends_flag = False
+        await ctx.reply('рассылки приостановлены')
+        write_to_log('sends', 'sends stopped by admin')
+        write_to_log('commands', 'admin_sends', 'stop')
+    else:
+        await ctx.reply('Команда не распознана')
+        write_to_log('commands', 'admin_sends', 'unknown mode')
 
 
 bot.run(config['token'])

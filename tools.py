@@ -1,7 +1,10 @@
-from time import strftime
 import sqlite3
+from time import strftime
 
-db = sqlite3.connect('CrossDataBase.db')
+from settings import config
+
+db = sqlite3.connect(f'{config["base_dir"]}/CrossDataBase.db')
+
 
 def translate(word):
     eng_ru_dict = {
@@ -40,6 +43,7 @@ def translate(word):
         'TheWarForFire': 'Война за огонь'}
     return eng_ru_dict.get(word, word)
 
+
 def write_to_log(file, event, description=None):
     if description:
         text = f'{strftime("%x %X")} | <{event}>: {description}\n'
@@ -48,6 +52,7 @@ def write_to_log(file, event, description=None):
     with open(fr"logs\{file}.log", "a") as f:
         f.write(text)
         print(text)
+
 
 def all_options(mode):
     options = {
