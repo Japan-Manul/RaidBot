@@ -24,5 +24,5 @@ def screen_test(function):
         print(f'test {i+1} passed')
 
 
-from testScreenAnalyzer import check_screen
+from ScreenAnalyzer import check_screen
 screen_test(check_screen)

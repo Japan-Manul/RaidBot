@@ -1,6 +1,6 @@
 import asyncio
 import sqlite3 as sql
-from time import strftime, strptime, ctime
+from time import strptime, ctime
 
 import pyautogui as ag
 from discord.ext import tasks, commands
@@ -17,6 +17,7 @@ bot = commands.Bot(command_prefix='>', intents=intents)
 
 sends_flag = True
 
+
 @bot.event
 async def on_ready():
     write_to_log('main', 'launch')
@@ -27,8 +28,7 @@ async def on_ready():
 @tasks.loop(seconds=1)
 async def start_count():
     curtime = strptime(ctime())
-    time_to_start = (curtime[4] - curtime[4] % 7.5 + 7.5) * 60 - (curtime[4] * 60 + curtime[5])
-    print('time to start ', time_to_start)
+    print('time to start: ', 450 - ((curtime[4] * 60 + curtime[5]) % 450))
     if (curtime[4] * 60 + curtime[5]) % 450 == 0:
         await asyncio.sleep(1)
         slow_count.start()
@@ -46,10 +46,11 @@ async def slow_count():
         write_to_log('main', 'analyze_cycle', f'result: {result}')
 
         admin = await bot.fetch_user(config['admin_id'])
-        file1 = discord.File(fr"{config['base_dir']}\temp\ProcessScreenE.jpg", filename="imageE.jpg")
-        file2 = discord.File(fr"{config['base_dir']}\temp\ProcessScreenM.jpg", filename="imageM.jpg")
-        file3 = discord.File(fr"{config['base_dir']}\temp\ProcessScreenH.jpg", filename="imageH.jpg")
+        file1 = discord.File(fr"{config['base_dir']}\temp\ProcessScreenE.png", filename="imageE.png")
+        file2 = discord.File(fr"{config['base_dir']}\temp\ProcessScreenM.png", filename="imageM.png")
+        file3 = discord.File(fr"{config['base_dir']}\temp\ProcessScreenH.png", filename="imageH.png")
         await admin.send(f'{result}', files=(file1, file2, file3))
+        write_to_log('sends', 'user_send', 'admin')
 
         embed_easy = discord.Embed(title='Легкий рейд', colour=discord.Colour.orange())
         embed_mid = discord.Embed(title='Средний рейд', colour=discord.Colour.blurple())
@@ -73,9 +74,9 @@ async def slow_count():
         build_image('Mid', result['Mid'])
         build_image('Hard', result['Hard'])
 
-        embed_easy.set_image(url="attachment://imageE.jpg")
-        embed_mid.set_image(url="attachment://imageM.jpg")
-        embed_hard.set_image(url="attachment://imageH.jpg")
+        embed_easy.set_image(url="attachment://imageE.png")
+        embed_mid.set_image(url="attachment://imageM.png")
+        embed_hard.set_image(url="attachment://imageH.png")
 
         embed_easy.set_author(name=f'{curtime[3]}:{curtime[4] if curtime[4] != 0 else "00"}')
 
@@ -87,9 +88,9 @@ async def slow_count():
             curs.close()
         write_to_log('sends', 'start_channels_sends')
         for id in channel_ids:
-            file_easy = discord.File(fr"{config['base_dir']}\temp\Easy.jpg", filename="imageE.jpg")
-            file_mid = discord.File(fr"{config['base_dir']}\temp\Mid.jpg", filename="imageM.jpg")
-            file_hard = discord.File(fr"{config['base_dir']}\temp\Hard.jpg", filename="imageH.jpg")
+            file_easy = discord.File(fr"{config['base_dir']}\temp\Easy.png", filename="imageE.png")
+            file_mid = discord.File(fr"{config['base_dir']}\temp\Mid.png", filename="imageM.png")
+            file_hard = discord.File(fr"{config['base_dir']}\temp\Hard.png", filename="imageH.png")
             try:
                 channel = await bot.fetch_channel(f'{id[0]}')
                 await channel.send(files=(file_easy, file_mid, file_hard), embeds=(embed_easy, embed_mid, embed_hard),
@@ -119,8 +120,8 @@ async def slow_count():
                     if (result[diff][2] in request[4].split('$')) and (result[diff][1] in request[5].split('$')):
                         try:
                             user = await bot.fetch_user(f"{user_id[0]}")
-                            curr_file = discord.File(fr"{config['base_dir']}\temp\{diff}.jpg",
-                                                     filename=f"image{diff[0]}.jpg")
+                            curr_file = discord.File(fr"{config['base_dir']}\temp\{diff}.png",
+                                                     filename=f"image{diff[0]}.png")
                             await user.send(file=curr_file, embed=curr_embed)
                             write_to_log('sends', 'user_send', f"user_id:'{user_id[0]}'")
                         except:
@@ -198,7 +199,8 @@ async def admin_send(ctx, mode):
     if mode == 'logs':
         file_names = ('logs/main.log', 'logs/sends.log', 'logs/commands.log', 'logs/db.log')
     elif mode == 'temp':
-        file_names = ('temp/ProcessScreenE.jpg', 'temp/ProcessScreenM.jpg', 'temp/ProcessScreenH.jpg', 'temp/Easy.jpg', 'temp/Mid.jpg', 'temp/Hard.jpg')
+        file_names = ('temp/ProcessScreenE.png', 'temp/ProcessScreenM.png', 'temp/ProcessScreenH.png', 'temp/Easy.png',
+                      'temp/Mid.png', 'temp/Hard.png')
     elif mode == 'db':
         file_names = ('CrossDataBase.db',)
     else:
@@ -231,14 +233,13 @@ async def admin_loop(ctx, mode):
 @bot.command()
 @commands.is_owner()
 async def admin_sends(ctx, mode):
+    global sends_flag
     if mode == 'start':
-        global sends_flag
         sends_flag = True
         await ctx.reply('рассылки возобновлены')
         write_to_log('sends', 'sends resumed by admin')
         write_to_log('commands', 'admin_sends', 'start')
     elif mode == 'stop':
-        global sends_flag
         sends_flag = False
         await ctx.reply('рассылки приостановлены')
         write_to_log('sends', 'sends stopped by admin')

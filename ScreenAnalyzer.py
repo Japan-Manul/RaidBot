@@ -14,7 +14,7 @@ def read_from_image(image_path, x, y, w, h):
     image = cv2.imread(image_path)
     cropped_image = image[y:y + h, x:x + w]
     cropped_image = cv2.cvtColor(cropped_image, cv2.COLOR_BGR2GRAY)
-    ret, cropped_image = cv2.threshold(cropped_image, 60, 255, cv2.THRESH_TOZERO)
+    ret, cropped_image = cv2.threshold(cropped_image, 55, 255, cv2.THRESH_TOZERO)
     result = ts.image_to_string(cropped_image, lang='rus')
     return result[:-1]
 
@@ -35,6 +35,8 @@ def compare_with_template(image_path, template_path, x, y, w, h):
 
 
 def check_map(image_path, raid):
+    if raid is None:
+        return None
     map_raid_dict = {'DataTheft': (
         'Bridge', 'Powerplant', 'OldTown', 'ChemicalPlant', 'WrathOfKhan', 'ShipGraveyard', 'FoundersCanyon',
         'RockCity'),
@@ -104,18 +106,18 @@ def analyze_cycle():
 
     pyautogui.click(80, 430)
     sleep(1)
-    pyautogui.screenshot(f'{config["base_dir"]}/temp/ProcessScreenE.jpg')
-    result_dict[raids[0]] = check_screen(f'{config["base_dir"]}/temp/ProcessScreenE.jpg')
+    pyautogui.screenshot(f'{config["base_dir"]}/temp/ProcessScreenE.png')
+    result_dict[raids[0]] = check_screen(f'{config["base_dir"]}/temp/ProcessScreenE.png')
 
     pyautogui.click(620, 430)
     sleep(1)
-    pyautogui.screenshot(f'{config["base_dir"]}/temp/ProcessScreenM.jpg')
-    result_dict[raids[1]] = check_screen(f'{config["base_dir"]}/temp/ProcessScreenM.jpg')
+    pyautogui.screenshot(f'{config["base_dir"]}/temp/ProcessScreenM.png')
+    result_dict[raids[1]] = check_screen(f'{config["base_dir"]}/temp/ProcessScreenM.png')
 
     pyautogui.click(850, 430)
     sleep(1)
-    pyautogui.screenshot(f'{config["base_dir"]}/temp/ProcessScreenH.jpg')
-    result_dict[raids[2]] = check_screen(f'{config["base_dir"]}/temp/ProcessScreenH.jpg')
+    pyautogui.screenshot(f'{config["base_dir"]}/temp/ProcessScreenH.png')
+    result_dict[raids[2]] = check_screen(f'{config["base_dir"]}/temp/ProcessScreenH.png')
 
     return result_dict
 
@@ -131,7 +133,7 @@ def build_image(difficulty, result):
         white_canvas[2:102, 2:414] = error_image[2:102, 2:414]
 
     if result[1]:
-        faction = cv2.imread(f'{config["base_dir"]}/Images/Factions/{result[1]}.jpg')
+        faction = cv2.imread(f'{config["base_dir"]}/Images/Factions/{result[1]}.png')
         white_canvas[104:190, 328:414] = faction
     else:
         white_canvas[104:190, 328:414] = error_image[104:190, 328:414]
@@ -142,5 +144,5 @@ def build_image(difficulty, result):
     else:
         white_canvas[104:190, 2:326] = error_image[104:190, 2:326]
 
-    cv2.imwrite(f'temp/{difficulty}.jpg', white_canvas)
-    return fr'{config["base_dir"]}/temp/{difficulty}.jpg'
+    cv2.imwrite(f'temp/{difficulty}.png', white_canvas)
+    return fr'{config["base_dir"]}/temp/{difficulty}.png'
