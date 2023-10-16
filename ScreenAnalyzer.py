@@ -34,7 +34,7 @@ def compare_with_template(image_path, template_path, x, y, w, h):
     return {'max_val': max_val, 'max_loc': max_loc}
 
 
-def check_map(image_path, raid):
+def check_map(image_path, raid, is_easy):
     if raid is None:
         return None
     map_raid_dict = {'DataTheft': (
@@ -51,7 +51,10 @@ def check_map(image_path, raid):
             'FoundersCanyon', 'RockCity')}
     max_max_val = -1
     max_map = ''
-    result = read_from_image(image_path, 1500, 368, 410, 60)
+    if is_easy:
+        result = read_from_image(image_path, 1505, 260, 265, 35)
+    else:
+        result = read_from_image(image_path, 1505, 305, 265, 35)
     for _map in map_raid_dict[raid]:
         similarity = similar(result, translate(_map))
         if similarity > max_max_val:
@@ -83,7 +86,7 @@ def check_faction(image_path):
     max_max_val = -1
     max_faction = ''
     for faction in factions:
-        result = compare_with_template(image_path, f'{config["base_dir"]}/Templates/Factions/{faction}.jpg', 1841, 174, 60, 60)
+        result = compare_with_template(image_path, f'{config["base_dir"]}/Templates/Factions/{faction}.jpg', 1840, 155, 60, 60)
         if result['max_val'] > max_max_val:
             max_max_val = result['max_val']
             max_faction = faction
@@ -92,10 +95,10 @@ def check_faction(image_path):
     return max_faction
 
 
-def check_screen(image_path):
+def check_screen(image_path, is_easy=False):
     faction = check_faction(image_path)
     raid = check_raid(image_path)
-    _map = check_map(image_path, raid)
+    _map = check_map(image_path, raid, is_easy)
     return raid, faction, _map
 
 
@@ -107,7 +110,7 @@ def analyze_cycle():
     pyautogui.click(80, 430)
     sleep(1)
     pyautogui.screenshot(f'{config["base_dir"]}/temp/ProcessScreenE.png')
-    result_dict[raids[0]] = check_screen(f'{config["base_dir"]}/temp/ProcessScreenE.png')
+    result_dict[raids[0]] = check_screen(f'{config["base_dir"]}/temp/ProcessScreenE.png', True)
 
     pyautogui.click(620, 430)
     sleep(1)
